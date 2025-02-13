@@ -1,0 +1,132 @@
+/* Reset básico para garantir uma base uniforme em todos os navegadores */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Faz com que largura e altura incluam padding e border */
+    font-family: Arial, sans-serif; /* Define a fonte padrão para todos os elementos */
+}
+
+/* Estilização do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif; /* Define a fonte principal da página */
+    background: #0E0B1E;  /* Cor de fundo escura */
+    color: #fafafa; /* Cor do texto clara para contraste */
+    font-size: 16px; /* Tamanho da fonte padrão */
+    line-height: 22px; /* Espaçamento entre linhas para melhor legibilidade */
+}
+
+/* Container principal para organizar o conteúdo */
+.container {
+    width: 90%; /* Define a largura máxima do container */
+    max-width: 1200px; /* Define um limite de largura para telas grandes */
+    margin: 0 auto; /* Centraliza o conteúdo na tela */
+    display: flex; /* Usa flexbox para organizar os elementos horizontalmente */
+    background-color: #1C1C42;
+}
+
+
+/* Estilização do cabeçalho */
+header {
+    background: #1C1C42; /* Define a cor de fundo do cabeçalho */
+    padding: 25px 0; /* Adiciona espaçamento acima e abaixo do cabeçalho */
+}
+
+/* Configuração da navegação */
+nav {
+    display: flex; /* Usa flexbox para organizar os elementos */
+    justify-content: space-between; /* Distribui os elementos igualmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+/* Estilização do logotipo */
+.logo {
+    font-size: 24px; /* Define o tamanho do texto do logotipo */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #f9f1e6; /* Define a cor do logo */
+}
+
+/* Configuração do menu */
+.menu {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: flex; /* Exibe os itens do menu em linha */
+    margin-right: 25px;
+}
+
+.menu li {
+    margin-left: 20px; /* Adiciona um espaço entre os itens do menu */
+
+}
+
+.menu a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color:#f9f1e6; /* Define a cor dos links do menu */
+    font-weight: 700;
+}
+
+img {
+    filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3));
+    height: 250px;
+}
+
+.intro, img {
+    margin-right: 32px;
+    margin-left: 60px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+h2, h3, h4, h5,h6, span {
+    margin-left: 16px;
+}
+
+h3 {
+    margin-top: 32px;
+}
+
+#about .container {
+    justify-content: space-between; 
+}
+
+h3 {
+    font-size: 22px;
+    color: #2ABDCD;
+    font-weight: 300;
+}
+
+
+.port {
+    margin-left: 20px; /* Adiciona um espaço entre os itens do menu */
+    margin-top: 32px;
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: flex; /* Exibe os itens do menu em linha */
+    margin-right: 25px;
+}
+
+#topo {
+    display:block;
+}
+
+
+#contact .container {
+    display: block;
+}
+
+
+form input, textarea, button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+textarea {
+    resize: none;
+    height:180px;
+}
+
+.contact-method {
+    display: flex;
+    margin-top: 50px;
+
+}
