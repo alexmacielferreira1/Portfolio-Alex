@@ -130,3 +130,19 @@ textarea {
     margin-top: 50px;
 
 }
+
+.profile-picture {
+    display: inline-block;
+    padding: 10px; /* Espaço para a borda */
+    border-radius: 50%; /* Mantém o arredondamento */
+    background: linear-gradient(45deg, #ff8a00,  #2ABDCD); /* Degradê da borda */
+}
+
+.store-front {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover; /* Garante que a imagem se ajuste sem deformar */
+    display: block;
+    border: 5px solid  #2ABDCD; /* Borda azul interna para separar o degradê */
+}
