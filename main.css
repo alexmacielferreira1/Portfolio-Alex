@@ -1,148 +1,364 @@
 /* Reset básico para garantir uma base uniforme em todos os navegadores */
 * {
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimentos padrão */
-    box-sizing: border-box; /* Faz com que largura e altura incluam padding e border */
-    font-family: Arial, sans-serif; /* Define a fonte padrão para todos os elementos */
+    margin: 0; /* Remove a margem de todos os elementos */
+    padding: 0; /* Remove o padding de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho total dos elementos */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
 }
 
 /* Estilização do corpo da página */
 body {
-    font-family: 'Roboto', sans-serif; /* Define a fonte principal da página */
-    background: #0E0B1E;  /* Cor de fundo escura */
-    color: #fafafa; /* Cor do texto clara para contraste */
-    font-size: 16px; /* Tamanho da fonte padrão */
-    line-height: 22px; /* Espaçamento entre linhas para melhor legibilidade */
+    font-family: 'Roboto', sans-serif; /* Define a fonte do corpo */
+    background: #0E0B1E; /* Cor de fundo */
+    color: #fafafa; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 22px; /* Altura da linha */
+    overflow-x: hidden; /* Evita o deslocamento horizontal */
 }
 
 /* Container principal para organizar o conteúdo */
 .container {
-    width: 90%; /* Define a largura máxima do container */
-    max-width: 1200px; /* Define um limite de largura para telas grandes */
-    margin: 0 auto; /* Centraliza o conteúdo na tela */
-    display: flex; /* Usa flexbox para organizar os elementos horizontalmente */
-    background-color: #1C1C42;
+    width: 90%; /* Largura de 90% da tela */
+    max-width: 1200px; /* Largura máxima de 1200px */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    display: flex; /* Usa flexbox para organizar os itens dentro */
+    background-color: #1C1C42; /* Cor de fundo do container */
 }
-
 
 /* Estilização do cabeçalho */
 header {
-    background: #1C1C42; /* Define a cor de fundo do cabeçalho */
-    padding: 25px 0; /* Adiciona espaçamento acima e abaixo do cabeçalho */
+    background: #1C1C42; /* Cor de fundo */
+    padding: 25px 0; /* Espaçamento superior e inferior */
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 /* Configuração da navegação */
 nav {
-    display: flex; /* Usa flexbox para organizar os elementos */
-    justify-content: space-between; /* Distribui os elementos igualmente */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
+    display: flex; /* Exibe os itens como flexbox */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha os itens no centro verticalmente */
 }
 
 /* Estilização do logotipo */
 .logo {
-    font-size: 24px; /* Define o tamanho do texto do logotipo */
-    font-weight: bold; /* Deixa o texto em negrito */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #f9f1e6; /* Define a cor do logo */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    text-decoration: none; /* Remove o sublinhado */
+    color: #f9f1e6; /* Cor do texto */
 }
 
-/* Configuração do menu */
+/* Menu de navegação */
 .menu {
-    list-style: none; /* Remove os marcadores padrão da lista */
-    display: flex; /* Exibe os itens do menu em linha */
-    margin-right: 25px;
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Exibe os itens do menu como flexbox */
+    margin-right: 25px; /* Margem à direita */
 }
 
+.menu.active {
+    display: block;
+}
 .menu li {
-    margin-left: 20px; /* Adiciona um espaço entre os itens do menu */
-
+    margin-left: 20px; /* Margem à esquerda de cada item do menu */
 }
 
 .menu a {
     text-decoration: none; /* Remove o sublinhado dos links */
-    color:#f9f1e6; /* Define a cor dos links do menu */
-    font-weight: 700;
+    color: #f9f1e6; /* Cor do texto */
+    font-weight: 700; /* Peso da fonte */
+}
+/* Oculta o menu hamburguer no desktop */
+.menu-hamburguer {
+    display: none; /* Não aparece em telas grandes */
+    background: none;
+    border: none;
+    font-size: 32px; /* Tamanho do ícone */
+    cursor: pointer;
+    color: #fff; /* Cor do texto */
 }
 
+@media (min-width: 768px) {
+    .menu {
+        display: flex !important;
+    }
+}
+/* Media query para telas menores (máx. 768px) */
+@media (max-width: 768px) {
+    .menu-hamburguer {
+        display: block; /* Mostra o botão do menu hamburguer */
+    }
+
+    .menu {
+        display: none; /* Oculta o menu inicialmente */
+        flex-direction: column; /* Exibe os itens em coluna */
+        position: absolute;
+        top: 70px; /* Abaixo do header */
+        left: 0;
+        width: 100%;
+        background: #1C1C42;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .menu li {
+        padding: 10px 0; /* Adiciona espaço entre os itens */
+    }
+}
+/* Estilos gerais de título */
+h2, h3, h4, h5, h6, span {
+    margin-left: 16px; /* Margem à esquerda */
+}
+
+h3 {
+    margin-top: 24px; /* Margem superior */
+    font-size: 22px; /* Tamanho da fonte */
+    color: #2ABDCD; /* Cor do texto */
+    font-weight: 300; /* Peso da fonte */
+}
+
+/* Estilos de imagem */
 img {
-    filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3));
-    height: 250px;
+    filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3)); /* Adiciona sombra à imagem */
+    height: 250px; /* Altura fixa da imagem */
 }
 
+/* Seção de introdução e imagens */
 .intro, img {
-    margin-right: 32px;
-    margin-left: 60px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-right: 32px; /* Margem à direita */
+    margin-left: 60px; /* Margem à esquerda */
+    margin-top: 24px; /* Margem superior */
+    margin-bottom: 32px; /* Margem inferior */
 }
 
-h2, h3, h4, h5,h6, span {
-    margin-left: 16px;
+/* Filtros e interatividade */
+#filters {
+    margin-bottom: 30px; /* Margem inferior */
 }
 
-h3 {
-    margin-top: 32px;
+#filters .filter {
+    display: inline-block; /* Exibe como bloco em linha */
+    padding: 8px 20px; /* Padding interno */
+    cursor: pointer; /* Indica que é interativo */
+    margin-right: 10px; /* Margem à direita */
+    background-color: #f0f0f0; /* Cor de fundo */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-weight: bold; /* Peso da fonte */
+    color: #333; /* Cor do texto */
 }
 
-#about .container {
-    justify-content: space-between; 
+#filters .filter.active {
+    background-color: #2ABDCD; /* Cor de fundo quando ativo */
+    color: white; /* Cor do texto quando ativo */
 }
 
-h3 {
-    font-size: 22px;
-    color: #2ABDCD;
-    font-weight: 300;
+/* Estilos de portfólio e itens de imagem */
+#port {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Exibe os itens como flexbox */
+    gap: 5px; /* Espaçamento entre os itens */
+    margin-left: 0; /* Remove a margem à esquerda */
+    margin-right: 0; /* Remove a margem à direita */
+    padding: 0; /* Remove o padding */
+    flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
+    justify-content: center; /* Alinha os itens no centro */
 }
 
-
-.port {
-    margin-left: 20px; /* Adiciona um espaço entre os itens do menu */
-    margin-top: 32px;
-    list-style: none; /* Remove os marcadores padrão da lista */
-    display: flex; /* Exibe os itens do menu em linha */
-    margin-right: 25px;
+#port span {
+    padding: 8px; /* Padding interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que é interativo */
+    font-weight: bold; /* Peso da fonte */
+    color: white; /* Cor do texto */
 }
 
-#topo {
-    display:block;
+#port > ul {
+    margin-top: 24px; /* Margem superior */
+    margin-bottom: 0; /* Remove a margem inferior */
 }
 
-
-#contact .container {
-    display: block;
+/* Itens de Portfólio */
+#portfolio-items {
+    display: flex; /* Exibe os itens como flexbox */
+    flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
+    justify-content: center; /* Alinha os itens no centro */
+    gap: 15px; /* Espaçamento entre os itens */
 }
 
-
-form input, textarea, button {
-    display: block;
-    width: 320px;
-    margin-bottom: 8px;
-    padding: 8px;
+/* Estilos de itens filtrados */
+.filtr-item {
+    display: none; /* Oculta os itens por padrão */
+    transition: opacity 0.3s ease-in-out; /* Transição suave */
 }
 
-textarea {
-    resize: none;
-    height:180px;
+.filtr-item.show {
+    display: block; /* Exibe o item */
+    opacity: 1; /* Torna o item totalmente visível */
 }
 
-.contact-method {
-    display: flex;
-    margin-top: 50px;
-
+.filtr-item.hide {
+    display: none; /* Oculta o item */
+    opacity: 0; /* Torna o item invisível */
 }
 
+/* Imagens dentro do portfólio */
+.filtr-item img {
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Legenda do portfólio */
+.portfolio-caption {
+    position: absolute; /* Posiciona a legenda de forma absoluta */
+    bottom: 10px; /* Distância da parte inferior */
+    left: 10px; /* Distância da parte esquerda */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Padding interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.portfolio-caption .title {
+    font-size: 18px; /* Tamanho da fonte do título */
+}
+
+.portfolio-caption .subtitle {
+    font-size: 14px; /* Tamanho da fonte do subtítulo */
+}
+
+/* Filtros do cliente e software */
+#cliente, #software {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Exibe os itens como flexbox */
+    margin-left: 0; /* Remove a margem à esquerda */
+    margin-right: 0; /* Remove a margem à direita */
+    flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
+    justify-content: center; /* Alinha os itens no centro */
+}
+
+#cliente ul span, #software ul span {
+    color: rgb(104, 107, 107); /* Cor do texto */
+    font-size: 12px; /* Tamanho da fonte */
+}
+
+#cliente ul span:hover, #software ul span:hover {
+    color: rgb(251, 254, 254); /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos de imagem no portfólio */
+#foto-port {
+    width: 100%; /* Largura total */
+    display: flex; /* Exibe os itens como flexbox */
+    justify-content: center; /* Alinha os itens no centro */
+}
+
+#foto-port img {
+    width: 300px; /* Largura fixa das imagens */
+    height: auto; /* Altura automática */
+}
+
+/* Detalhes e ícones */
+#cliente ul span, #software ul span {
+    cursor: pointer; /* Indica que é interativo */
+}
+
+/* Estilo do rodapé */
+#rodape {
+    margin: 0 auto; /* Centraliza o rodapé */
+    margin-top: 24px; /* Margem superior */
+    margin-bottom: 24px; /* Margem inferior */
+}
+
+#rodape p {
+    margin: 0 auto; /* Centraliza o parágrafo */
+    margin-top: 24px; /* Margem superior */
+    margin-bottom: 24px; /* Margem inferior */
+}
+
+/* Imagem de perfil */
 .profile-picture {
-    display: inline-block;
-    padding: 10px; /* Espaço para a borda */
-    border-radius: 50%; /* Mantém o arredondamento */
-    background: linear-gradient(45deg, #ff8a00,  #2ABDCD); /* Degradê da borda */
+    display: inline-block; /* Exibe como bloco em linha */
+    padding: 10px; /* Padding interno */
+    border-radius: 50%; /* Torna a imagem redonda */
+    background: linear-gradient(45deg, #ff8a00, #2ABDCD); /* Fundo com gradiente */
 }
 
+/* Estilos de imagem do portfólio */
 .store-front {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover; /* Garante que a imagem se ajuste sem deformar */
-    display: block;
-    border: 5px solid  #2ABDCD; /* Borda azul interna para separar o degradê */
+    width: 250px; /* Largura fixa */
+    height: 250px; /* Altura fixa */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Faz com que a imagem cubra a área */
+    display: block; /* Exibe como bloco */
+    border: 5px solid #2ABDCD; /* Borda ao redor da imagem */
 }
+
+/* Adicionando responsividade */
+@media (max-width: 900px) {
+    /* Estilos para o container principal */
+    .container {
+        flex-direction: column; /* Coloca os itens em coluna */
+        align-items: center; /* Alinha os itens no centro */
+    }
+
+    /* Estilo para filtros */
+    #filters {
+        margin-top: 20px; /* Margem superior */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* Estilo para itens de portfólio */
+    #portfolio-items {
+        flex-direction: column; /* Coloca os itens em coluna */
+        align-items: center; /* Alinha os itens no centro */
+    }
+
+    /* Estilo para imagens do portfólio em telas menores */
+    #foto-port img {
+        width: 100%; /* Largura total */
+    }
+}
+
+
+
+/* ===================== FORMULÁRIO ===================== */
+
+form {
+    max-width: 360px; /* Define uma largura máxima para o formulário */
+    display: flex; /* Flexbox para centralizar os itens */
+    flex-direction: column; /* Organiza os campos em uma coluna */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    padding: 16px; /* Adiciona um pouco de padding para que os campos não fiquem colados nas bordas */
+}
+
+.form-campo label {
+    font-weight: bold; /* Deixa o texto do label em negrito */
+    display: block; /* Faz com que o label ocupe toda a largura do contêiner */
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%; /* Faz os campos ocuparem toda a largura do contêiner */
+    display: block; /* Garante que cada campo fique em uma linha separada */
+    padding: 8px; /* Adiciona espaçamento interno para melhor usabilidade */
+}
+
+.form-campo textarea {
+    resize: none; /* Impede que o usuário redimensione a caixa de texto */
+    height: 120px; /* Define uma altura fixa para o campo de mensagem */
+}
+
+form {
+    max-width: 360px; /* Define uma largura máxima para o formulário */
+    
+}
+
+form button {
+    max-width: 120px; /* Define uma largura máxima para o botão de envio */
+    background-color: #2ABDCD;
+    
+}
+
+/* =================== FIM DO FORMULÁRIO =================== */
