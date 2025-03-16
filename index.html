@@ -3,59 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Alex</title>
-    <link rel="stylesheet" href="./main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+    <title>PORTFÓLIO</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos Customizados -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/fakeLoader.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-</body>
-</html>
-<!-- 1. Cabeçalho -->
-<header>
-    <div id="topo" class="container">
-        <nav>
-            <a href="#" class="logo">ALEX MACIEL FERREIRA</a>
-            
-            <!-- Ícone do menu hamburguer -->
-            <button class="menu-hamburguer">&#9776;</button>
-            
-            <ul class="menu">
-                <li><a href="#home">INÍCIO</a></li>
-                <li><a href="#about">SOBRE</a></li>
-                <li><a href="#edu">FORMAÇÃO</a></li>
-                <li><a href="#exp">EXPERIÊNCIA</a></li>
-                <li><a href="#skills">HABILIDADES</a></li>
-                <li><a href="#port">PORTFÓLIO</a></li>
-                <li><a href="#contact">CONTATO</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <header class="container">
+        <div class="language-bar">
+            <span id="language-text">Escolha o idioma / Choose the language:</span>
+            <img src="./images/frag_PT-BR.png" alt="Português" id="lang-pt" class="lang-btn" data-lang="pt">
+            <img src="./images/flag_EN-US.png" alt="English" id="lang-en" class="lang-btn" data-lang="en">
+        </div>
+        
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">ALEX MACIEL FERREIRA</a>
+                <button class="menu-hamburguer">&#9776;</button>
+                <ul class="menu">
+                    <li><a href="#home" class="lang-item" data-lang-key="home">INÍCIO</a></li>
+                    <li><a href="#about" class="lang-item" data-lang-key="about">SOBRE</a></li>
+                    <li><a href="#edu" class="lang-item" data-lang-key="edu">FORMAÇÃO</a></li>
+                    <li><a href="#exp" class="lang-item" data-lang-key="exp">EXPERIÊNCIA</a></li>
+                    <li><a href="#port" class="lang-item" data-lang-key="port">PORTFÓLIO</a></li>
+                    <li><a href="#contact" class="lang-item" data-lang-key="contact">CONTATO</a></li>
+                </ul>
+                <a href="https://www.linkedin.com/in/alexmacielferreira/" target="_blank" class="linkedin-logo">
+                    <img src="./icones/icone_LINKEDIN.png" alt="LinkedIn Alex Ferreira">
+                </a>
+            </nav>
+        </div>
+    </header>
 
-<h2>&nbsp;</h2>
+
+        <!-- Loader (carregando a página) -->
+        <div class="fakeLoader"></div>
+    <section>
+        <div id="about" class="container banner-container">
+            <!-- Adicionando um contêiner para o banner e o botão -->
+            <div id="banner-destaque">
+                <h3>DESTAQUE</h3>
+                <!-- Imagem com proporção 16:9 -->
+                <img class="banner" id="banner" src="http://dummyimage.com/960x540" alt="Banner de exemplo">
+                <!-- Texto abaixo da imagem, que expande a imagem ao ser clicado -->
+                <div class="expandir" id="expandir">EXPANDIR</div>
+            </div>
+        </div>
+    </section>
+    <h2>&nbsp;</h2>
+    <section>
+        <div class="container">
+            <div>
+                <h3>SOBRE</h3>
+                <h2>&nbsp;</h2>
+                <h2>Publicitário, Videomaker<br>e Editor de Vídeo</h2>
+                <h4>&nbsp;</h4>
+                <h4>REGISTRO de PUBLICITÁRIO</h4>
+                <h4>&nbsp;</h4>
+                <h4>DRT RADIALISTA</h4>
+                <h5>Editor de vídeo</h5>
+                <h5>Operador de áudio </h5>
+            </div class="profile-picture">
+            <img class="store-front" src="./alexmacielferreira_menor.jpg" alt="Foto Alex Ferreira"/>
+                    <div id="edu"></div>
+        </section>
+
+        <h2>&nbsp;</h2>
+
 <section>
-    <div class="container" id="banner-destaque">
-        <h3>DESTAQUE</h3>
-    </div>
-</section>
-<h2>&nbsp;</h2>
-<section>
+
     <div class="container">
-        <div id="about">
-            <h3>SOBRE</h3>
-            <h2>&nbsp;</h2>
-            <h2>Publicitário, Videomaker<br>e Editor de Vídeo</h2>
-            <h4>&nbsp;</h4>
-            <h4>REGISTRO de PUBLICITÁRIO</h4>
-            <h4>&nbsp;</h4>
-            <h4>DRT RADIALISTA</h4>
-            <h5>Editor de vídeo</h5>
-            <h5>Operador de áudio </h5>
-        </div class="profile-picture">
-        <img class="store-front" src="./alexmacielferreira_menor.jpg" alt="Foto Alex Ferreira"/>
         <div>            
             <h3>FORMAÇÃO</h3>
             <ul>
@@ -76,6 +104,7 @@
                     <span>UFF - Universidade do Vale do Rio dos Sinos - Término: 12/2015 </span>
                 </li>
         </div>
+    
         </div>
        <!-- <div>
             <h3>Oficinas/Cursos complementares</h3>
@@ -100,123 +129,112 @@
                 <span>Operador de áudio profissional - Carga Horária: 300 horas  - 12/2009</span>
             </li>
         </div> -->
+        <div id="exp"></div>
     </div>
+    </div>
+</section>
+<h2>&nbsp;</h2>
+    <section>
+        <div class="container">
+        <div>
+            <h3>EXPERIÊNCIA</h3>                
+            <h2>&nbsp;</h2>
+            <h2>Mais de 13 anos em Edição de Vídeo</h2>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h4>ASSIST RJ - Associação dos Servidores Municipais, Estaduais e Federais do RJ </h4>
+                    <span>Editor de vídeo – Assistente de Mídias I - 11/2019 - 09-2021 </span>
+                </li>
+                <li>
+                    <h4>ILUSION - HENRY E KLAUSS</h4>
+                    <span>FRELANCER - Editor de vídeo - VFX/MOTION 03 e 04/2021 </span>
+                </li>
+                <li>
+                    <h4>TATUÍ FILMES - NETFLIX - PARIS FILMES </h4>
+                    <span>FRELANCER - Editor de vídeo - PROMOS E TRAILERS 11/2017</span>
+                </li>
+                <li>
+                    <h4>BOX BRAZIL - Programadora Independente </h4>
+                    <span>Editor de vídeo – Produtor de TV - 06/2014 - 03/2015 </span>
+                </li>
+                <li>
+                    <h4>Canal Rural – Grupo RBS/Rede Globo RS/SC </h4>
+                    <span>Editor de vídeo – Produtor de chamadas - 01/2012 - 12/2014</span>
+                </li>
+                <li>
+                    <h4>TV Unisinos – Canal Futura </h4>
+                    <span>Editor de vídeo – Produtor de chamadas - 05/2010 - 12/2011</span>
+                </li>
+                <li>
+                    <h4>Opinião Livre Pub. e Propaganda - NET TV </h4>
+                    <span>Editor de vídeo - 11/2009 - 03/2010</span>
+                </li>
+                <li>
+                    <h4>Agência Zoom – UNASP - São Paulo </h4>
+                    <span>Assistente de arte e desenvolvedor web - 02/2009 - 07/2009</span>
+                </li>
+            </ul>
+            <div id="port"></div>
+        </div>
     </section>
-<h2>&nbsp;</h2>
-<!-- 5. Experiência -->
-<section>
-    <div class="container">
-    <div id="exp">
-        <h3>EXPERIÊNCIA</h3>                
-        <h2>&nbsp;</h2>
-        <h2>Mais de 13 anos em Edição de Vídeo</h2>
+    <h2>&nbsp;</h2>
+    
+    <!-- Seção de Portfólio -->
+    <div id="portfolio" class="portfolio segments">
+        <div class="container">
+            <div>
+                <h3>PORTFÓLIO</h3> 
+            </div>
+            <div class="box-content">
+                
+                                <div class="portfolio-filter-menu">
+                                    <ul>
+                                        <!-- As categorias serão inseridas aqui -->
+                                    </ul>
+                                </div>
+                                
+                
+<!-- Filtro de Seleção -->
+<div class="portfolio-filter-menu">
+    <h5 id="toggle-filters">OUTROS FILTROS</h5>
+    <div id="client-filter">
+        <form>
+            <div class="form-group">
+                <div class="checkbox-container" id="atividade-checkboxes">
+                    <!--    <h5>Selecione Atividade:</h5> -->
+                </div>
+                
+            <div class="form-group">
+                <div class="checkbox-container" id="client-checkboxes">
+                  <!--    <h5>Selecione Cliente:</h5>-->
+                </div>
+
+                <div class="checkbox-container" id="software-checkboxes">
+                  <!--    <h5>Selecione Software:</h5>-->
+                </div>
+            </div>
+        </form>
     </div>
-    <div>
-        <ul>
-            <li>
-                <h4>ASSIST RJ - Associação dos Servidores Municipais, Estaduais e Federais do RJ </h4>
-                <span>Editor de vídeo – Assistente de Mídias I - 11/2019 - 09-2021 </span>
-            </li>
-            <li>
-                <h4>ILUSION - HENRY E KLAUSS</h4>
-                <span>FRELANCER - Editor de vídeo - VFX/MOTION 03 e 04/2021 </span>
-            </li>
-            <li>
-                <h4>TATUÍ FILMES - NETFLIX - PARIS FILMES </h4>
-                <span>FRELANCER - Editor de vídeo - PROMOS E TRAILERS 11/2017</span>
-            </li>
-            <li>
-                <h4>BOX BRAZIL - Programadora Independente </h4>
-                <span>Editor de vídeo – Produtor de TV - 06/2014 - 03/2015 </span>
-            </li>
-            <li>
-                <h4>Canal Rural – Grupo RBS/Rede Globo RS/SC </h4>
-                <span>Editor de vídeo – Produtor de chamadas - 01/2012 - 12/2014</span>
-            </li>
-            <li>
-                <h4>TV Unisinos – Canal Futura </h4>
-                <span>Editor de vídeo – Produtor de chamadas - 05/2010 - 12/2011</span>
-            </li>
-            <li>
-                <h4>Opinião Livre Pub. e Propaganda - NET TV </h4>
-                <span>Editor de vídeo - 11/2009 - 03/2010</span>
-            </li>
-            <li>
-                <h4>Agência Zoom – UNASP - São Paulo </h4>
-                <span>Assistente de arte e desenvolvedor web - 02/2009 - 07/2009</span>
-            </li>
-        </ul>
-    </div>
-</section>
-<h2>&nbsp;</h2>
-<!-- 6. Portfólio -->
-<section>
-    <div class="container">
-        <h3>PORTFÓLIO</h3>
-        <div id="port">
-        <ul data-filter="all" class="active">
-            <span>TODOS</span>
-        </ul>
-        <ul data-filter="1">
-            <span>ROTEIRO</span>
-        </ul>
-        <ul data-filter="2">
-            <span>GRAVAÇÃO</span>
-        </ul>
-        <ul data-filter="3">
-            <span>EDIÇÃO</span>
-        </ul>
-        <ul data-filter="4" class="">
-            <span>FINALIZAÇÃO</span>
-        </ul>
-        <ul data-filter="5">
-            <span>PLANEJAMENTO</span>
-        </ul>
-    <div id="cliente">
-    <ul data-filter="6">
-    <span>CLIENTE:</span>
-    </ul>
-    <ul data-filter="6">
-    <span>ASSIST</span>
-    </ul>
-    <ul data-filter="7">
-    <span>NOVO TEMPO</span>
-    </ul>
-    <ul data-filter="7">
-    <span>NOVO TEMPO</span>
-    </ul>
-    <ul data-filter="7">
-    <span>NOVO TEMPO</span>
-    </ul>
-    <ul data-filter="7">
-    <span>NOVO TEMPO</span>
-    </ul>
-    </div>
-    <div id="software">
-    <ul data-filter="6">
-    <span>SOFTWARE:</span>
-    </ul>
-    <ul data-filter="6">
-    <span>eee</span>
-    </ul>
-    <ul data-filter="7">
-    <span>ddd</span>
-    </ul>
-    <ul data-filter="7">
-    <span>ccc</span>
-    </ul>
-    <ul data-filter="7">
-    <span>bbb</span>
-    </ul>
-    <ul data-filter="7">
-    <span>aaa</span>
-    </ul>
 </div>
-            <div id="foto-port"><img src="./images/video_molde1-100.jpg" alt="Imagem Portfolio"/> </div>
+
+                <!-- Container dos Itens do Portfólio -->
+                <div id="portfolio-container" class="row no-gutters filtr-container"></div>
+                <!-- Modal -->
+                <div class="modal fade" id="meuModal" tabindex="-1" aria-labelledby="meuModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="meuModalLabel"></h5>
+                            </div>
+                            <div class="modal-body"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-</section>
-<h2>&nbsp;</h2>
 <!-- 7. Contato -->
 <section id="contato">
 
@@ -224,26 +242,45 @@
             <h3>ENTRE EM CONTATO</h3>
     </div>
     <div class="container">
-        <form>
-            <div class="form-campo">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
+        <div id="redessociais">
+            <p>Fique à vontade para me chamar nas redes sociais abaixo, especialmente no LinkedIn, que é uma das formas mais rápidas de me conectar. Estou também disponível no WhatsApp para qualquer dúvida.</p>    
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="./icones/icone_YOUTUBE.png" alt="YouTube">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="./icones/icone_FACEBOOK.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="./icones/icone_INSTAGRAM.png" alt="Instagram">
+            </a>
+            <a href="https://www.instagram.com/avsimples/" target="_blank">
+                <img src="./icones/icone_AVSIMPLES.png" alt="Instagram Avsimples">
+            </a>
+            <a href="https://wa.me/21967019823" target="_blank">
+                <img src="./icones/icone_WHATSAPP.png" alt="WhatsApp">
+            </a>
+        </div>
+        <form class="col-md-5">
+            <div id="contact" class="form-campo">
+                <label class="form-label" for="nome">Nome:</label>
+                <input type="text" class="form-control mb-3" id="nome" name="nome">
             </div>
             <div class="form-campo">
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone">
+                <label class="form-label" for="telefone">Telefone:</label>
+                <input type="text" class="form-control mb-3" id="telefone" name="telefone">
             </div>
             <div class="form-campo">
-                <label for="email">email:</label>
-                <input type="text" id="email" name="email">
+                <label class="form-label" for="email">Email:</label>
+                <input type="text" class="form-control mb-3" id="email" name="email">
             </div>
             <div class="form-campo">
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem"></textarea>
+                <label class="form-label" for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" class="form-control mb-3" name="mensagem"></textarea>
             </div>
-            <button type="Submit" >Enviar</button>
+            <button type="Submit" class="btn btn-primary">Enviar</button>
         </form>
-    </div>
+        
+</div>
 </section>
 
 <!-- 8. Rodapé -->
@@ -253,8 +290,70 @@
     </div>
 </footer>
 
-    <!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
-<script src="./main.js"></script> <!-- Certifique-se de que esse arquivo está na pasta correta -->
+ <!-- Carregar o jQuery (necessário para outros scripts, se você estiver usando jQuery) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Carregar o Bootstrap Bundle (Bootstrap e dependências, incluindo o Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Scripts adicionais -->
+<script src="js/modal.js" defer></script> <!-- Personalizado: Certifique-se de que seja carregado após o Bootstrap -->
+<script src="js/contact-form.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.filterizr.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+<!-- Scripts finais -->
+<script src="js/main.js" defer></script> <!-- Arquivo final, para garantir que tudo esteja carregado antes -->
+
+   
+    <script src="js/main.js" defer></script> <!-- Arquivo separado -->
+
+
+  
+<script>
+    $(document).ready(function(){
+        $("#client-filter").hide(); // Oculta o menu ao carregar a página
+
+        $("#toggle-filters").click(function(){
+            $("#client-filter").slideToggle(); // Alterna a visibilidade do menu de filtros
+        });
+    });    
+    
+</script>
+<script>
+    // Obter os elementos
+    const banner = document.getElementById("banner");
+    const expandirButton = document.getElementById("expandir");
+    const bannerContainer = document.querySelector(".banner-container");
+
+    // Definir o estado inicial da imagem e do contêiner
+    let isExpanded = false;
+
+    // Função para alternar a expansão da imagem e do contêiner
+    function toggleImageSize() {
+        if (isExpanded) {
+            // Se a imagem estiver expandida, volta para 1/3 da altura
+            banner.style.opacity = "1"; // Mantém visível
+            bannerContainer.style.maxHeight = "33%"; // Reduz a altura do contêiner
+            banner.classList.add("degrade"); // Degradê ativado
+            expandirButton.innerText = "EXPANDIR"; // Alterar o texto do botão
+        } else {
+            // Se a imagem não estiver expandida, expande para 100%
+            banner.style.opacity = "1"; // Garante que a imagem fique visível
+            bannerContainer.style.maxHeight = "100%"; // Expande a altura do contêiner
+            banner.classList.remove("degrade"); // Remove o degradê
+            expandirButton.innerText = "RECOLHER"; // Alterar o texto do botão
+        }
+        isExpanded = !isExpanded; // Alterar o estado
+    }
+
+    // Adicionar o evento de clique ao botão de expandir/recolher
+    expandirButton.addEventListener("click", toggleImageSize);
+</script>
+<script src="js/language.js" defer></script>
+<!-- Script de troca de idioma -->
 </body>
 </html>

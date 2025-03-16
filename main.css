@@ -40,6 +40,7 @@ nav {
     display: flex; /* Exibe os itens como flexbox */
     justify-content: space-between; /* Espaça os itens igualmente */
     align-items: center; /* Alinha os itens no centro verticalmente */
+    width: 100%;
 }
 
 /* Estilização do logotipo */
@@ -62,12 +63,13 @@ nav {
 }
 .menu li {
     margin-left: 20px; /* Margem à esquerda de cada item do menu */
+    
 }
 
 .menu a {
     text-decoration: none; /* Remove o sublinhado dos links */
     color: #f9f1e6; /* Cor do texto */
-    font-weight: 700; /* Peso da fonte */
+    font-weight: 100; /* Peso da fonte */
 }
 /* Oculta o menu hamburguer no desktop */
 .menu-hamburguer {
@@ -77,6 +79,19 @@ nav {
     font-size: 32px; /* Tamanho do ícone */
     cursor: pointer;
     color: #fff; /* Cor do texto */
+}
+
+.linkedin-logo {
+    display: block;
+   /*  align-items: center;
+    margin-left: 30px; /* Mantém o espaçamento desejado */
+}
+
+.linkedin-logo img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle; /* Garante melhor alinhamento */
+    align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -131,6 +146,23 @@ img {
     margin-top: 24px; /* Margem superior */
     margin-bottom: 32px; /* Margem inferior */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Filtros e interatividade */
 #filters {
@@ -325,12 +357,10 @@ img {
 
 /* ===================== FORMULÁRIO ===================== */
 
-form {
-    max-width: 360px; /* Define uma largura máxima para o formulário */
-    display: flex; /* Flexbox para centralizar os itens */
-    flex-direction: column; /* Organiza os campos em uma coluna */
-    margin: 0 auto; /* Centraliza o formulário horizontalmente */
-    padding: 16px; /* Adiciona um pouco de padding para que os campos não fiquem colados nas bordas */
+form, #redessociais {
+    max-width: 50%; /* Define uma largura máxima para o formulário */
+    padding: 24px; /* Adiciona um pouco de padding para que os campos não fiquem colados nas bordas */
+    display: inline;
 }
 
 .form-campo label {
@@ -349,12 +379,6 @@ form {
     resize: none; /* Impede que o usuário redimensione a caixa de texto */
     height: 120px; /* Define uma altura fixa para o campo de mensagem */
 }
-
-form {
-    max-width: 360px; /* Define uma largura máxima para o formulário */
-    
-}
-
 form button {
     max-width: 120px; /* Define uma largura máxima para o botão de envio */
     background-color: #2ABDCD;
@@ -362,3 +386,34 @@ form button {
 }
 
 /* =================== FIM DO FORMULÁRIO =================== */
+
+.icones {
+    width: 30px;
+    height: 30px;
+}
+.language-bar {
+    position: fixed;
+    top: 0; /* Coloca a barra no topo */
+    left: 0;
+    width: 100%;
+    height: 20px; /* Barra fininha */
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+.language-bar span {
+    margin-right: 4px; /* Espaçamento pequeno entre o texto e as bandeiras */
+}
+
+.language-bar img {
+    width: 18px; /* Ícones menores */
+    height: auto;
+    cursor: pointer;
+    margin-left: 2px; /* Espaçamento de 2px entre as bandeiras */
+    margin-bottom: -1px; /* Ajuste para baixar os ícones um pouco */
+}
+
