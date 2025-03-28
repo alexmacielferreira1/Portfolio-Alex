@@ -23,8 +23,16 @@ body {
     margin: 0 auto; /* Centraliza o conteúdo */
     display: flex; /* Usa flexbox para organizar os itens dentro */
     background-color: #1C1C42; /* Cor de fundo do container */
+        flex-direction: column; /* Já aplica nas telas menores, mas se certifique de que funciona bem em telas grandes também */
 }
-
+.menu-hamburguer {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+}
 /* Estilização do cabeçalho */
 header {
     background: #1C1C42; /* Cor de fundo */
@@ -35,13 +43,6 @@ header {
     z-index: 1;
 }
 
-/* Configuração da navegação */
-nav {
-    display: flex; /* Exibe os itens como flexbox */
-    justify-content: space-between; /* Espaça os itens igualmente */
-    align-items: center; /* Alinha os itens no centro verticalmente */
-    width: 100%;
-}
 
 /* Estilização do logotipo */
 .logo {
@@ -49,36 +50,6 @@ nav {
     font-weight: bold; /* Peso da fonte */
     text-decoration: none; /* Remove o sublinhado */
     color: #f9f1e6; /* Cor do texto */
-}
-
-/* Menu de navegação */
-.menu {
-    list-style: none; /* Remove os marcadores da lista */
-    display: flex; /* Exibe os itens do menu como flexbox */
-    margin-right: 25px; /* Margem à direita */
-}
-
-.menu.active {
-    display: block;
-}
-.menu li {
-    margin-left: 20px; /* Margem à esquerda de cada item do menu */
-    
-}
-
-.menu a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #f9f1e6; /* Cor do texto */
-    font-weight: 100; /* Peso da fonte */
-}
-/* Oculta o menu hamburguer no desktop */
-.menu-hamburguer {
-    display: none; /* Não aparece em telas grandes */
-    background: none;
-    border: none;
-    font-size: 32px; /* Tamanho do ícone */
-    cursor: pointer;
-    color: #fff; /* Cor do texto */
 }
 
 .linkedin-logo {
@@ -93,6 +64,7 @@ nav {
     vertical-align: middle; /* Garante melhor alinhamento */
     align-items: center;
 }
+
 
 @media (min-width: 768px) {
     .menu {
@@ -146,22 +118,6 @@ img {
     margin-top: 24px; /* Margem superior */
     margin-bottom: 32px; /* Margem inferior */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Filtros e interatividade */
@@ -417,3 +373,20 @@ form button {
     margin-bottom: -1px; /* Ajuste para baixar os ícones um pouco */
 }
 
+/* Esconde o menu no início */
+.menu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu.active {
+    display: block;
+}
+
+/* Para garantir que o menu se ajuste corretamente para o mobile */
+@media screen and (max-width: 900px) {
+    .menu {
+        display: none;
+    }
+}

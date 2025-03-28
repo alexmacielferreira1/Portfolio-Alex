@@ -1,289 +1,43 @@
-/* Reset básico para garantir uma base uniforme em todos os navegadores */
-* {
-    margin: 0; /* Remove a margem de todos os elementos */
-    padding: 0; /* Remove o padding de todos os elementos */
-    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho total dos elementos */
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
+
+/* style comeca aqui
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 110%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #fff;
 }
 
-/* Estilização do corpo da página */
-body {
-    font-family: 'Roboto', sans-serif; /* Define a fonte do corpo */
-    background: #0E0B1E; /* Cor de fundo */
-    color: #fafafa; /* Cor do texto */
-    font-size: 16px; /* Tamanho da fonte */
-    line-height: 22px; /* Altura da linha */
-    overflow-x: hidden; /* Evita o deslocamento horizontal */
+h1 {
+    font-size: 48px;
 }
 
-/* Container principal para organizar o conteúdo */
-.container {
-    width: 90%; /* Largura de 90% da tela */
-    max-width: 1200px; /* Largura máxima de 1200px */
-    margin: 0 auto; /* Centraliza o conteúdo */
-    display: flex; /* Usa flexbox para organizar os itens dentro */
-    background-color: #1C1C42; /* Cor de fundo do container */
-    overflow: hidden; /* Remove qualquer rolagem */
-    border-radius: 10px; /* Ajuste o valor conforme necessário */
-}
-
-/* Estilização do cabeçalho */
-header {
-    background: #1C1C42; /* Cor de fundo */
-    padding: 25px 0; /* Espaçamento superior e inferior */
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-}
-
-/* Estilização do logotipo */
-.logo {
-    font-size: 24px; /* Tamanho da fonte */
-    font-weight: bold; /* Peso da fonte */
-    text-decoration: none; /* Remove o sublinhado */
-    color: #f9f1e6; /* Cor do texto */
-}
-
-.linkedin-logo {
-    display: block;
-   /*  align-items: center;
-    margin-left: 30px; /* Mantém o espaçamento desejado */
-}
-
-.linkedin-logo img {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle; /* Garante melhor alinhamento */
-    align-items: center;
-}
-
-/* Estilos gerais de título */
-h2, h3, h4, h5, h6, span {
+h2 {
+    font-size: 36px;
 }
 
 h3 {
-    margin-top: 24px; /* Margem superior */
-    font-size: 22px; /* Tamanho da fonte */
-    color: #2ABDCD; /* Cor do texto */
-    font-weight: 300; /* Peso da fonte */
+    font-size: 28px;
 }
 
-
-
-/* Seção de introdução e imagens */
-.intro, #about > img {
-    margin-right: 32px; /* Margem à direita */
-    margin-left: 60px; /* Margem à esquerda */
-    margin-top: 24px; /* Margem superior */
-    margin-bottom: 32px; /* Margem inferior */
+h4 {
+    font-size: 18px;
 }
 
-
-/* Filtros e interatividade */
-#filters {
-    margin-bottom: 30px; /* Margem inferior */
+h5 {
+    font-size: 16px;
 }
 
-#filters .filter {
-    display: inline-block; /* Exibe como bloco em linha */
-    padding: 8px 20px; /* Padding interno */
-    cursor: pointer; /* Indica que é interativo */
-    margin-right: 10px; /* Margem à direita */
-    background-color: #f0f0f0; /* Cor de fundo */
-    border-radius: 20px; /* Bordas arredondadas */
-    font-weight: bold; /* Peso da fonte */
-    color: #333; /* Cor do texto */
-}
-
-#filters .filter.active {
-    background-color: #2ABDCD; /* Cor de fundo quando ativo */
-    color: white; /* Cor do texto quando ativo */
-}
-
-
-/* Estilos de portfólio e itens de imagem */
-#port {
-    list-style: none; /* Remove os marcadores da lista */
-    display: flex; /* Exibe os itens como flexbox */
-    gap: 5px; /* Espaçamento entre os itens */
-    margin-left: 0; /* Remove a margem à esquerda */
-    margin-right: 0; /* Remove a margem à direita */
-    padding: 0; /* Remove o padding */
-    flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
-    justify-content: center; /* Alinha os itens no centro */
-}
-
-
-#port span {
-    padding: 8px; /* Padding interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Indica que é interativo */
-    font-weight: bold; /* Peso da fonte */
-    color: #bbb; /* Cor do texto */
-}
-
-#port > ul {
-    margin-top: 24px; /* Margem superior */
-    margin-bottom: 0; /* Remove a margem inferior */
-}
-
-/* Itens de Portfólio */
-#portfolio-items {
-    display: flex; /* Exibe os itens como flexbox */
-    flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
-    justify-content: center; /* Alinha os itens no centro */
-    gap: 15px; /* Espaçamento entre os itens */
-}
-
-
-/* Estilos de itens filtrados */
-.filtr-item {
-    display: none; /* Oculta os itens por padrão */
-    transition: opacity 0.3s ease-in-out; /* Transição suave */
-}
-
-.filtr-item.show {
-    display: block; /* Exibe o item */
-    opacity: 1; /* Torna o item totalmente visível */
-}
-
-.filtr-item.hide {
-    display: none; /* Oculta o item */
-    opacity: 0; /* Torna o item invisível */
-}
-
-/* Imagens dentro do portfólio */
-.filtr-item img {
-    width: 100%; /* Largura total */
-    height: auto; /* Altura automática */
-    border-radius: 8px; /* Bordas arredondadas */
-}
-
-
-
-/* Filtros do cliente e software */
-#cliente, #software {
-    list-style: none; /* Remove os marcadores da lista */
-    display: flex; /* Exibe os itens como flexbox */
-    margin-left: 0; /* Remove a margem à esquerda */
-    margin-right: 0; /* Remove a margem à direita */
-    flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
-    justify-content: center; /* Alinha os itens no centro */
-}
-
-
-
-#cliente ul span, #software ul span {
-    color: rgb(104, 107, 107); /* Cor do texto */
-    font-size: 12px; /* Tamanho da fonte */
-}
-
-
-
-#cliente ul span:hover, #software ul span:hover {
-    color: rgb(251, 254, 254); /* Cor do texto ao passar o mouse */
-}
-
-
-/* Detalhes e ícones */
-#cliente ul span, #software ul span {
-    cursor: pointer; /* Indica que é interativo */
-}
-
-
-
-/* Estilo do rodapé */
-#rodape {
-    margin: 0 auto; /* Centraliza o rodapé */
-    margin-top: 24px; /* Margem superior */
-    margin-bottom: 24px; /* Margem inferior */
-}
-
-#rodape p {
-    margin: 0 auto; /* Centraliza o parágrafo */
-    margin-top: 24px; /* Margem superior */
-    margin-bottom: 24px; /* Margem inferior */
-}
-
-/* Imagem de perfil */
-.profile-picture {
-    display: inline-block; /* Exibe como bloco em linha */
-    padding: 10px; /* Padding interno */
-    border-radius: 50%; /* Torna a imagem redonda */
-    background: linear-gradient(45deg, #ff8a00, #2ABDCD); /* Fundo com gradiente */
-}
-
-
-/* Estilos de imagem do portfólio */
-.store-front {
-    width: 250px; /* Largura fixa */
-    height: 250px; /* Altura fixa */
-    border-radius: 50%; /* Torna a imagem redonda */
-    object-fit: cover; /* Faz com que a imagem cubra a área */
-    display: block; /* Exibe como bloco */
-    border: 5px solid #2ABDCD; /* Borda ao redor da imagem */
-}
-
-/* ===================== FORMULÁRIO ===================== */
-
-form, #redessociais {
-    max-width: 50%; /* Define uma largura máxima para o formulário */
-    padding: 24px; /* Adiciona um pouco de padding para que os campos não fiquem colados nas bordas */
-    display: inline;
-}
-
-.form-campo label {
-    font-weight: bold; /* Deixa o texto do label em negrito */
-    display: block; /* Faz com que o label ocupe toda a largura do contêiner */
-}
-
-.form-campo input,
-.form-campo textarea {
-    width: 100%; /* Faz os campos ocuparem toda a largura do contêiner */
-    display: block; /* Garante que cada campo fique em uma linha separada */
-    padding: 8px; /* Adiciona espaçamento interno para melhor usabilidade */
-}
-
-.form-campo textarea {
-    resize: none; /* Impede que o usuário redimensione a caixa de texto */
-    height: 120px; /* Define uma altura fixa para o campo de mensagem */
-}
-form button {
-    max-width: 120px; /* Define uma largura máxima para o botão de envio */
-    background-color: #2ABDCD;
-    
-}
-
-/* =================== FIM DO FORMULÁRIO =================== */
-
-.language-bar {
-    position: fixed;
-    top: 0; /* Coloca a barra no topo */
-    left: 0;
-    width: 100%;
-    height: 20px; /* Barra fininha */
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h6 {
     font-size: 14px;
-    z-index: 1000;
-    background-color: hsla(211, 100%, 35%, 0.489);
 }
-
-.language-bar span {
-    margin-right: 4px; /* Espaçamento pequeno entre o texto e as bandeiras */
-}
-
-.language-bar img {
-    width: 18px; /* Ícones menores */
-    height: auto;
-    cursor: pointer;
-    margin-left: 2px; /* Espaçamento de 2px entre as bandeiras */
-    margin-bottom: -1px; /* Ajuste para baixar os ícones um pouco */
-}
-
+*/
 a {
     color: #fff;
 }
@@ -335,6 +89,11 @@ ul {
 }
 .title-resume h2 span {
     color: #2ABDCD;
+}
+
+.box-content {
+    padding: 40px;
+    border-radius: 3px;
 }
 
 /*button default*/
@@ -731,6 +490,71 @@ ul {
         transform: translateY(-101%);
     }
 }
+/*blog*/
+.blog .content {
+    background: #262626;
+    border-radius: 3px;
+}
+.blog .content:hover img {
+    -moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+.blog .content .image {
+    overflow: hidden;
+}
+.blog .content .image img {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.5s;
+}
+.blog .content .blog-title {
+    padding: 20px;
+}
+.blog .content .blog-title h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 35px;
+}
+.blog .content .blog-title h4 a {
+    transition: all .2s ease;
+}
+.blog .content .blog-title h4 a:hover {
+    color: #2ABDCD;
+}
+.blog .content .blog-title .date {
+    font-weight: 500;
+}
+.blog .content .blog-title .date i {
+    margin: 0 10px;
+    font-size: 7px;
+    vertical-align: middle;
+    color: #525252;
+}
+.blog .content .blog-title .date span {
+    color: #2ABDCD;
+    font-size: 14px;
+    position: relative;
+    z-index: 99;
+}
+.blog .content .blog-title .date span::after {
+    content: "";
+    height: 0;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    z-index: -1000;
+}
+.blog .content .blog-title .date span:hover::after {
+    height: 10px;
+   background: #525252;
+}
 
 /*contact*/
 .contact .content-left h2 {
@@ -795,6 +619,42 @@ ul {
 #foto-port img {
     max-width: 100%;
     height: auto;
+}
+
+
+/* Layout responsivo */
+@media (max-width: 900px) {
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #portfolio-items {
+        flex-direction: column;
+    }
+    
+    .section-title h3, 
+    .home-intro .intro-caption h2, 
+    .about .content-left .content h2, 
+    .resume .content-left .title-resume h2, 
+    .contact .content-left h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-intro .intro-image, 
+    .about .content-right {
+        display: none;
+    }
+
+    .portfolio .content-image {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+    }
 }
 
 .checkbox-container {
@@ -1125,275 +985,4 @@ body.modal-open {
 
 .expandir:hover {
     color: #0056b3; /* Muda a cor ao passar o mouse */
-}
-
-/* Estilização geral */
-.container {
-    max-width: 900px;
-    margin: auto;
-}
-
-h3 {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Timeline */
-.timeline {
-    position: relative;
-    list-style: none;
-    padding-left: 0;
-    margin-left: 20px;
-}
-
-/* Linha vertical da timeline */
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background: #fff;
-    border-radius: 2px;
-}
-
-/* Itens da timeline */
-.timeline li {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-/* Ponto da timeline */
-.timeline li::before {
-    content: "";
-    position: absolute;
-    left: 10px;
-    width: 14px;
-    height: 14px;
-    background: #ffffff;
-    border-radius: 50%;
-    border: 3px solid white;
-}
-
-/* Estilização do conteúdo */
-.timeline-content {
-    background: rgba(0, 0, 0, 0.01);
-    padding: 10px 15px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-left: 40px; /* Para afastar do ponto */
-}
-
-.timeline-content h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.timeline-content span {
-    font-size: 14px;
-    color: #666;
-}
-/* Layout responsivo */
-@media (max-width: 900px) {
-    
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #portfolio-items {
-        flex-direction: column;
-    }
-    
-    .section-title h3, 
-    .home-intro .intro-caption h2, 
-    .about .content-left .content h2, 
-    .resume .content-left .title-resume h2, 
-    .contact .content-left h2 {
-        font-size: 32px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 640px) {
-    .home-intro .intro-image, 
-    .about .content-right {
-        display: none;
-    }
-
-    .portfolio .content-image {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 10px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Estilo para a Formação */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding-top: 30px;
-}
-
-h3 {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Linha central */
-.timeline {
-    position: relative;
-    padding: 20px 0;
-}
-
-h4 {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Itens da timeline */
-.timeline-items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Ponto da timeline */
-.timeline-items li {
-    position: relative;
-    width: 100%;
-    margin: 20px 0;
-}
-
-/* Bolinhas conectadas */
-.timeline-items li::before {
-    content: "";
-    position: absolute;
-    top: 0;
-
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 3px #0a7c89;
-}
-
-
-/* Estilização do conteúdo */
-.timeline-content {
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background: rgba(0, 0, 0, 0.05);
-    left: -8px;
-}
-
-/* Diferenciar Audiovisual e Programação */
-.timeline-items li.audiovisual .timeline-content {
-    background: rgba(30, 236, 255, 0.1);
-    border-left: 4px solid #0a7c89;
-}
-
-.timeline-items li.programacao .timeline-content {
-    background: rgba(0, 123, 255, 0.1);
-    border-left: 4px solid #007bff;
-}
-
-
-#banner-destaque {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.banner {
-    width: 100%;
-    transition: height 0.4s ease-in-out;
-    height: 50px; /* Altura inicial */
-}
-
-.expandido {
-    height: 450px; /* Altura expandida */
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px; /* Degradê sobre a imagem */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
-    transition: height 0.4s ease-in-out;
-}
-
-.contraido {
-    height: 30px; /* Mostra apenas uma faixa da imagem */
-}
-
-.expandir {
-    position: relative;
-    z-index: 2;
-    margin-top: -30px;
-    padding: 2px;
-    cursor: pointer;
-    background-color: #1C1C42;
-    color: rgba(255, 255, 255, 0.283);
-    display: inline-block;
-    border-radius: 5px;
-    width: 100%;
-    text-align: center;
-    font-style: normal;
-    font-weight:lighter;
-    transition: background 0.3s;
-    font-size: 16px;
-}
-
-.expandir:hover {
-    color: white;
-    font-style: normal;
-    font-weight:lighter;
-}
-
-.sub-info, .extra-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinha à esquerda */
-    margin-top: 10px;
-}
-
-.sub-info h4, .extra-info h5 {
-    margin: 5px 0; /* Espaçamento entre os itens */
-    font-weight: normal;
-}
-.section-divider {
-    width: 100%;
-    height: 2px;
-    margin: 2px auto;
-    opacity: 0.02;
-    border-radius: 5px;
-}
-
-.imagem_perfil {
-    object-fit: cover; /* Faz a imagem se ajustar, cortando onde necessário */
-    border-radius: 10px; /* Opcional: Adiciona bordas arredondadas */
-}
-
-.content-right {
-    width: 100%;
-    overflow: hidden; /* Garante que nada ultrapasse os limites */
 }

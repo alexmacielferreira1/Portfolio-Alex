@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.png">
     <title>PORTFÓLIO</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900&display=swap" rel="stylesheet">
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900&amp;display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Estilos Customizados -->
+<!-- Bootstrap CSS (Versão 5) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA0n60vn/iymK18B6FeRQbOAIpHAlj2HZ1C7H+/X5FLw1ANNCeB5e/UMrD0v+U" crossorigin="anonymous">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+<!-- Estilos Customizados -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/fakeLoader.css">
@@ -20,167 +28,244 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="container">
-        <div class="language-bar">
-            <span id="language-text">Escolha o idioma / Choose the language:</span>
-            <img src="./images/frag_PT-BR.png" alt="Português" id="lang-pt" class="lang-btn" data-lang="pt">
-            <img src="./images/flag_EN-US.png" alt="English" id="lang-en" class="lang-btn" data-lang="en">
-        </div>
-        
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">ALEX MACIEL FERREIRA</a>
-                <button class="menu-hamburguer">&#9776;</button>
-                <ul class="menu">
-                    <li><a href="#home" class="lang-item" data-lang-key="home">INÍCIO</a></li>
-                    <li><a href="#about" class="lang-item" data-lang-key="about">SOBRE</a></li>
-                    <li><a href="#edu" class="lang-item" data-lang-key="edu">FORMAÇÃO</a></li>
-                    <li><a href="#exp" class="lang-item" data-lang-key="exp">EXPERIÊNCIA</a></li>
-                    <li><a href="#port" class="lang-item" data-lang-key="port">PORTFÓLIO</a></li>
-                    <li><a href="#contact" class="lang-item" data-lang-key="contact">CONTATO</a></li>
-                </ul>
-                <a href="https://www.linkedin.com/in/alexmacielferreira/" target="_blank" class="linkedin-logo">
-                    <img src="./icones/icone_LINKEDIN.png" alt="LinkedIn Alex Ferreira">
-                </a>
-            </nav>
-        </div>
-    </header>
-
-
-        <!-- Loader (carregando a página) -->
-        <div class="fakeLoader"></div>
-    <section>
-        <div id="about" class="container banner-container">
-            <!-- Adicionando um contêiner para o banner e o botão -->
-            <div id="banner-destaque">
-                <h3>DESTAQUE</h3>
-                <!-- Imagem com proporção 16:9 -->
-                <img class="banner" id="banner" src="http://dummyimage.com/960x540" alt="Banner de exemplo">
-                <!-- Texto abaixo da imagem, que expande a imagem ao ser clicado -->
-                <div class="expandir" id="expandir">EXPANDIR</div>
-            </div>
-        </div>
-    </section>
-    <h2>&nbsp;</h2>
-    <section>
-        <div class="container">
-            <div>
-                <h3>SOBRE</h3>
-                <h2>&nbsp;</h2>
-                <h2>Publicitário, Videomaker<br>e Editor de Vídeo</h2>
-                <h4>&nbsp;</h4>
-                <h4>REGISTRO de PUBLICITÁRIO</h4>
-                <h4>&nbsp;</h4>
-                <h4>DRT RADIALISTA</h4>
-                <h5>Editor de vídeo</h5>
-                <h5>Operador de áudio </h5>
-            </div class="profile-picture">
-            <img class="store-front" src="./alexmacielferreira_menor.jpg" alt="Foto Alex Ferreira"/>
-                    <div id="edu"></div>
-        </section>
-
-        <h2>&nbsp;</h2>
-
-<section>
-
+  <!-- Header com o Menu Responsivo -->
+  <header class="navbar navbar-expand-lg sticky-top" id="cabecalho" data-bs-smooth-scroll="true">
     <div class="container">
-        <div>            
-            <h3>FORMAÇÃO</h3>
-            <ul>
-                <li>
-                    <h4>Pós-Graduação em VFX</h4>
-                    <span>Meliès - Término: 07/2023 </span>
+        <h1 class="navbar-brand m-0 section-title">ALEX MACIEL FERREIRA</h1>
+
+        <!-- Botão do menu responsivo -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu colapsável -->
+        <div class="collapse navbar-collapse justify-content-end" id="menu-navegacao">
+            <ul class="nav nav-pills d-block d-lg-flex" id="cabecalho">
+                <li class="nav-item fw-bold">
+                    <a class="nav-link" href="#home">
+                       INÍCIO
+                    </a>
                 </li>
-                <li>
-                    <h4>Bacharelado em Cinema e Audiovisual</h4>
-                    <span>UFF - Universidade Federal Fluminense - Término: 12/2022 </span>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link" href="#about">
+                       SOBRE
+                    </a>
                 </li>
-                <li>
-                    <h4>Videografismo e Efeitos Visuais</h4>
-                    <span>Azimut Escola de Animação e Computação Gráfica - Carga Horária: 320 horas + Projeto Final 06/2017  </span>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link" href="#edu">
+                        FORMAÇÃO
+                    </a>
                 </li>
-                <li>
-                    <h4>Bacharelado em Publicidade e Propaganda</h4>
-                    <span>UFF - Universidade do Vale do Rio dos Sinos - Término: 12/2015 </span>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link" href="#exp">
+                        EXPERIÊNCIA
+                    </a>
                 </li>
-        </div>
-    
-        </div>
-       <!-- <div>
-            <h3>Oficinas/Cursos complementares</h3>
-            <li>
-                <h4>QI Escola de educação profissional</h4>
-                <span>Técnico em informática - Carga Horária: 1050 horas + 300 horas de estágio - 10/2008</span>
-            </li>
-            <li>
-                <h4>Oscip Landell de Moura </h4>
-                <span>Edição de vídeo em Adobe Premiere Pro - Carga Horária: 300 horas  - 12/2009</span>
-            </li>
-            <li>
-                <h4>Oscip Landell de Moura </h4>
-                <span>After Effects (Motion para TV) - Carga Horária: 300 horas  - 12/2009</span>
-            </li>
-            <li>
-                <h4>Oscip Landell de Moura </h4>
-                <span>Edição de Vídeo em Final Cut Pro - UNASP-SP - Carga Horária: 40 horas 03/2009</span>
-            </li>
-            <li>
-                <h4>Oscip Landell de Moura </h4>
-                <span>Operador de áudio profissional - Carga Horária: 300 horas  - 12/2009</span>
-            </li>
-        </div> -->
-        <div id="exp"></div>
-    </div>
-    </div>
-</section>
-<h2>&nbsp;</h2>
-    <section>
-        <div class="container">
-        <div>
-            <h3>EXPERIÊNCIA</h3>                
-            <h2>&nbsp;</h2>
-            <h2>Mais de 13 anos em Edição de Vídeo</h2>
-        </div>
-        <div>
-            <ul>
-                <li>
-                    <h4>ASSIST RJ - Associação dos Servidores Municipais, Estaduais e Federais do RJ </h4>
-                    <span>Editor de vídeo – Assistente de Mídias I - 11/2019 - 09-2021 </span>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link" href="#port">
+                        PORTFÓLIO
+                    </a>
                 </li>
-                <li>
-                    <h4>ILUSION - HENRY E KLAUSS</h4>
-                    <span>FRELANCER - Editor de vídeo - VFX/MOTION 03 e 04/2021 </span>
-                </li>
-                <li>
-                    <h4>TATUÍ FILMES - NETFLIX - PARIS FILMES </h4>
-                    <span>FRELANCER - Editor de vídeo - PROMOS E TRAILERS 11/2017</span>
-                </li>
-                <li>
-                    <h4>BOX BRAZIL - Programadora Independente </h4>
-                    <span>Editor de vídeo – Produtor de TV - 06/2014 - 03/2015 </span>
-                </li>
-                <li>
-                    <h4>Canal Rural – Grupo RBS/Rede Globo RS/SC </h4>
-                    <span>Editor de vídeo – Produtor de chamadas - 01/2012 - 12/2014</span>
-                </li>
-                <li>
-                    <h4>TV Unisinos – Canal Futura </h4>
-                    <span>Editor de vídeo – Produtor de chamadas - 05/2010 - 12/2011</span>
-                </li>
-                <li>
-                    <h4>Opinião Livre Pub. e Propaganda - NET TV </h4>
-                    <span>Editor de vídeo - 11/2009 - 03/2010</span>
-                </li>
-                <li>
-                    <h4>Agência Zoom – UNASP - São Paulo </h4>
-                    <span>Assistente de arte e desenvolvedor web - 02/2009 - 07/2009</span>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link" href="#contact">
+                        CONTATO
+                    </a>
                 </li>
             </ul>
-            <div id="port"></div>
         </div>
-    </section>
-    <h2>&nbsp;</h2>
-    
+                    <!-- Ícone do LinkedIn -->
+                    <a href="https://www.linkedin.com/in/alexmacielferreira/" target="_blank" class="linkedin-logo ms-3">
+                        <img src="./icones/icone_LINKEDIN.png" alt="LinkedIn Alex Ferreira" width="30">
+                    </a>
+    </div>
+</header>
+<section>
+    <div id="about" class="container">
+        <div id="banner-destaque">
+         <!--    <h3>DESTAQUE</h3>-->
+            <img class="banner" id="banner" src="http://dummyimage.com/960x540" alt="Banner de exemplo">
+            <div class="overlay" id="overlay"></div>
+            <div class="expandir" id="expandir">EXPANDIR</div>
+        </div>
+    </div>
+</section>
+<div class="section-divider"></div>
+<section>
+    <div class="container">
+                <div class="col-md-6">
+                    <div class="content-left">
+                        <div class="title-resume">
+                            <h3>SOBRE</h3>
+                            <h2>Publicitário, Videomaker <br> e <span>Editor de Vídeo</span></h2>
+                        </div>
+                        <div class="sub-info">
+                            <h4>REGISTRO de PUBLICITÁRIO</h4>
+                            <h4>DRT RADIALISTA</h4>
+                        </div>
+                        <div class="extra-info">
+                            <h5>Editor de vídeo</h5>
+                            <h5>Operador de áudio</h5>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-6">
+                        <div class="content-right">
+                            <img class="imagem_perfil" src="./foto_exemplo1.jpg">
+                    </div>
+                </div>
+    </div>
+</section>
+<div class="section-divider"></div>
+<section>
+<!-- Formação -->
+<section>
+       <!-- Formação -->
+<div class="container">
+    <div class="content-left">
+        <div class="title-resume">
+    <h3>FORMAÇÃO</h3>
+    <div class="row">
+        <!-- Coluna Audiovisual -->
+        <div class="col-md-6">
+            <div class="timeline">
+                <h4>Audiovisual</h4>
+                <ul class="timeline-items">
+                    <li class="audiovisual">
+                        <div class="timeline-content">
+                            <h5>Pós-Graduação em VFX</h5>
+                            <span>Meliès - Término: 07/2023</span>
+                        </div>
+                    </li>
+                    <li class="audiovisual">
+                        <div class="timeline-content">
+                            <h5>Bacharelado em Cinema e Audiovisual</h5>
+                            <span>UFF - Universidade Federal Fluminense - Término: 12/2022</span>
+                        </div>
+                    </li>
+                    <li class="audiovisual">
+                        <div class="timeline-content">
+                            <h5>Videografismo e Efeitos Visuais</h5>
+                            <span>Azimut Escola de Animação e Computação Gráfica - 320 horas + Projeto Final (06/2017)</span>
+                        </div>
+                    </li>
+                    <li class="audiovisual">
+                        <div class="timeline-content">
+                            <h5>Bacharelado em Publicidade e Propaganda</h5>
+                            <span>UFF - Universidade do Vale do Rio dos Sinos - Término: 12/2015</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Coluna Programação -->
+        <div class="col-md-6">
+            <div class="timeline">
+                <h4>Programação</h4>
+                <ul class="timeline-items">
+                    <li class="programacao">
+                        <div class="timeline-content">
+                            <h5>Desenvolvimento Fullstack</h5>
+                            <span>EBAC - Em andamento</span>
+                        </div>
+                    </li>
+                    <li class="programacao">
+                        <div class="timeline-content">
+                            <h5>JavaScript Avançado</h5>
+                            <span>Origamid - Concluído em 2023</span>
+                        </div>
+                    </li>
+                    <li class="programacao">
+                        <div class="timeline-content">
+                            <h5>Python para Análise de Dados</h5>
+                            <span>USP - Em andamento</span>
+                        </div>
+                    </li>
+                    <li class="programacao">
+                        <div class="timeline-content">
+                            <h5>Curso de React</h5>
+                            <span>Rocketseat - Concluído em 2022</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+<div class="section-divider"></div>
+<section>
+    <!-- Experiência -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="content-left">
+                <div class="title-resume">
+                    <h3>EXPERIÊNCIA</h3>
+                    <h2>Mais de 16 anos em <span>Edição de Vídeo</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="content-right">
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-content">
+                            <h4>ASSIST RJ - Associação dos Servidores Municipais, Estaduais e Federais do RJ</h4>
+                            <span>Editor de vídeo – Assistente de Mídias I - 11/2019 - 09/2021</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h4>ILUSION - HENRY E KLAUSS</h4>
+                            <span>FREELANCER - Editor de vídeo - VFX/MOTION 03 e 04/2021</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h4>TATUÍ FILMES - NETFLIX - PARIS FILMES</h4>
+                            <span>FREELANCER - Editor de vídeo - PROMOS E TRAILERS 11/2017</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h4>BOX BRAZIL - Programadora Independente</h4>
+                            <span>Editor de vídeo – Produtor de TV - 06/2014 - 03/2015</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h4>Canal Rural – Grupo RBS/Rede Globo RS/SC</h4>
+                            <span>Editor de vídeo – Produtor de chamadas - 01/2012 - 12/2014</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h4>TV Unisinos – Canal Futura</h4>
+                            <span>Editor de vídeo – Produtor de chamadas - 05/2010 - 12/2011</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h4>Opinião Livre Pub. e Propaganda - NET TV</h4>
+                            <span>Editor de vídeo - 11/2009 - 03/2010</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h4>Agência Zoom – UNASP - São Paulo</h4>
+                            <span>Assistente de arte e desenvolvedor web - 02/2009 - 07/2009</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+    <div class="section"> 
     <!-- Seção de Portfólio -->
     <div id="portfolio" class="portfolio segments">
         <div class="container">
@@ -189,108 +274,146 @@
             </div>
             <div class="box-content">
                 
-                                <div class="portfolio-filter-menu">
-                                    <ul>
-                                        <!-- As categorias serão inseridas aqui -->
-                                    </ul>
-                                </div>
-                                
-                
-<!-- Filtro de Seleção -->
-<div class="portfolio-filter-menu">
-    <h5 id="toggle-filters">OUTROS FILTROS</h5>
-    <div id="client-filter">
-        <form>
-            <div class="form-group">
-                <div class="checkbox-container" id="atividade-checkboxes">
-                    <!--    <h5>Selecione Atividade:</h5> -->
-                </div>
-                
-            <div class="form-group">
-                <div class="checkbox-container" id="client-checkboxes">
-                  <!--    <h5>Selecione Cliente:</h5>-->
-                </div>
-
-                <div class="checkbox-container" id="software-checkboxes">
-                  <!--    <h5>Selecione Software:</h5>-->
-                </div>
+            <div class="portfolio-filter-menu">
+                <ul>
+                    <!-- As categorias serão inseridas aqui -->
+                </ul>
             </div>
-        </form>
+        </div>
+    <!-- Filtro de Seleção -->
+    <div class="portfolio-filter-menu">
+        <h5 id="toggle-filters">OUTROS FILTROS</h5>
+        <div id="client-filter">
+            <form>
+                <div class="form-group">
+                    <div class="checkbox-container" id="atividade-checkboxes">
+                        <!--    <h5>Selecione Atividade:</h5> -->
+                    </div>
+                    
+                <div class="form-group">
+                    <div class="checkbox-container" id="client-checkboxes">
+                        <!--    <h5>Selecione Cliente:</h5>-->
+                        </div>
+                        <div class="checkbox-container" id="software-checkboxes">
+                        <!--    <h5>Selecione Software:</h5>-->
+                        </div>
+                    </div>
+            </form>
+        </div>
     </div>
-</div>
-
                 <!-- Container dos Itens do Portfólio -->
                 <div id="portfolio-container" class="row no-gutters filtr-container"></div>
-                <!-- Modal -->
-                <div class="modal fade" id="meuModal" tabindex="-1" aria-labelledby="meuModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="meuModalLabel"></h5>
-                            </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="meuModal" tabindex="-1" aria-labelledby="meuModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="meuModalLabel"></h5>
+                                </div>
                             <div class="modal-body"></div>
                         </div>
                     </div>
                 </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col">
+            <div class="row">
+                conteudo
             </div>
         </div>
     </div>
-<!-- 7. Contato -->
-<section id="contato">
+<!-- Contato -->
+<div id="contact" class="contact segments">
+    <div class="container">
+        <div class="box-content">
+            <div class="row align-items-center">
+                <!-- Coluna Esquerda (Texto e Redes Sociais) -->
+                <div class="col-md-6">
+                    <div class="content-left">
+                        <div class="section-title section-title-left">
+                            <h3>ENTRE EM CONTATO</h3>
+                        </div>
+                        <h2>Vamos conversar!</h2>
+                        <p>Se tiver alguma dúvida, ideia ou quiser bater um papo, estou à disposição. Você pode me encontrar no LinkedIn, onde a conexão é mais rápida, ou me chamar diretamente no WhatsApp. Também estou presente no YouTube e no Instagram do AV Simples.</p>
+                        <p>Fique à vontade para me mandar uma mensagem!</p>
+                        <ul class="list-unstyled d-flex">
+                            <li>
+                                <a href="https://www.youtube.com/" target="_blank">
+                                    <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
+                                </a>
+                            </li>
+                            <li class="ms-3">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+                                </a>
+                            </li>
+                            <li class="ms-3">
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+                                </a>
+                            </li>
+                            <li class="ms-3">
+                                <a href="https://www.instagram.com/avsimples/" target="_blank">
+                                    <img src="./icones/icone_AVSIMPLES.png" alt="Instagram Avsimples" style="width: 30px; height: auto;">
+                                </a>
+                            </li>
+                            <li class="ms-3">
+                                <a href="https://wa.me/21967019823" target="_blank">
+                                    <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-    <div class="container">
-            <h3>ENTRE EM CONTATO</h3>
-    </div>
-    <div class="container">
-        <div id="redessociais">
-            <p>Fique à vontade para me chamar nas redes sociais abaixo, especialmente no LinkedIn, que é uma das formas mais rápidas de me conectar. Estou também disponível no WhatsApp para qualquer dúvida.</p>    
-            <a href="https://www.youtube.com/" target="_blank">
-                <img src="./icones/icone_YOUTUBE.png" alt="YouTube">
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-                <img src="./icones/icone_FACEBOOK.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <img src="./icones/icone_INSTAGRAM.png" alt="Instagram">
-            </a>
-            <a href="https://www.instagram.com/avsimples/" target="_blank">
-                <img src="./icones/icone_AVSIMPLES.png" alt="Instagram Avsimples">
-            </a>
-            <a href="https://wa.me/21967019823" target="_blank">
-                <img src="./icones/icone_WHATSAPP.png" alt="WhatsApp">
-            </a>
+                <!-- Coluna Direita (Formulário) -->
+                <div class="col-md-6">
+                    <div class="content-right">
+                        <form action="#" class="contact-form" id="contact-form" method="post">
+                            <div class="row">
+                                <div class="col">
+                                    <div id="nome-field">
+                                        <input type="text" placeholder="Nome" class="form-control" name="nome">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div id="telefone-field">
+                                        <input type="text" placeholder="Telefone" class="form-control" name="telefone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div id="email-field">
+                                        <input type="email" placeholder="Email" class="form-control" name="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div id="mensagem-field">
+                                        <textarea cols="30" rows="5" class="form-control" name="mensagem" placeholder="Mensagem"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- Fim da Row -->
         </div>
-        <form class="col-md-5">
-            <div id="contact" class="form-campo">
-                <label class="form-label" for="nome">Nome:</label>
-                <input type="text" class="form-control mb-3" id="nome" name="nome">
-            </div>
-            <div class="form-campo">
-                <label class="form-label" for="telefone">Telefone:</label>
-                <input type="text" class="form-control mb-3" id="telefone" name="telefone">
-            </div>
-            <div class="form-campo">
-                <label class="form-label" for="email">Email:</label>
-                <input type="text" class="form-control mb-3" id="email" name="email">
-            </div>
-            <div class="form-campo">
-                <label class="form-label" for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" class="form-control mb-3" name="mensagem"></textarea>
-            </div>
-            <button type="Submit" class="btn btn-primary">Enviar</button>
-        </form>
-        
+    </div>
 </div>
+<!-- Fim Contato -->
 </section>
-
 <!-- 8. Rodapé -->
 <footer>
     <div class="container" id="rodape">
         <p>&copy; Todos os direitos reservados</p>
     </div>
 </footer>
-
- <!-- Carregar o jQuery (necessário para outros scripts, se você estiver usando jQuery) -->
+<!-- Carregar o jQuery (necessário para outros scripts, se você estiver usando jQuery) -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <!-- Carregar o Bootstrap Bundle (Bootstrap e dependências, incluindo o Popper.js) -->
@@ -308,11 +431,8 @@
 <!-- Scripts finais -->
 <script src="js/main.js" defer></script> <!-- Arquivo final, para garantir que tudo esteja carregado antes -->
 
-   
-    <script src="js/main.js" defer></script> <!-- Arquivo separado -->
+<script src="js/main.js" defer></script> <!-- Arquivo separado -->
 
-
-  
 <script>
     $(document).ready(function(){
         $("#client-filter").hide(); // Oculta o menu ao carregar a página
@@ -355,5 +475,22 @@
 </script>
 <script src="js/language.js" defer></script>
 <!-- Script de troca de idioma -->
+
+<script>
+    document.getElementById("expandir").addEventListener("click", function() {
+        let banner = document.getElementById("banner");
+        let overlay = document.getElementById("overlay");
+
+        if (banner.classList.contains("expandido")) {
+            banner.classList.remove("expandido");
+            overlay.classList.add("contraido");
+            this.textContent = "EXPANDIR";
+        } else {
+            banner.classList.add("expandido");
+            overlay.classList.remove("contraido");
+            this.textContent = "CONTRAIR";
+        }
+    });
+</script>
 </body>
 </html>
