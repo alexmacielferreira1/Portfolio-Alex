@@ -1196,6 +1196,12 @@ h3 {
     font-size: 14px;
     color: #666;
 }
+
+#portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 /* Layout responsivo */
 @media (max-width: 900px) {
     
@@ -1206,6 +1212,9 @@ h3 {
     
     #portfolio-items {
         flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
     
     .section-title h3, 
@@ -1246,6 +1255,11 @@ h3 {
     max-width: 900px;
     margin: auto;
     padding-top: 30px;
+}
+
+.card-title, .card-subtitle {
+    color:#1C1C42 ;
+    align-items: flex-start;
 }
 
 h3 {
