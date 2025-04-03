@@ -1,10 +1,4 @@
-/* Reset básico para garantir uma base uniforme em todos os navegadores */
-* {
-    margin: 0; /* Remove a margem de todos os elementos */
-    padding: 0; /* Remove o padding de todos os elementos */
-    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho total dos elementos */
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
-}
+@use 'config/reset';
 
 /* Estilização do corpo da página */
 body {

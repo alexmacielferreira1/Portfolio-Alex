@@ -1,0 +1,23 @@
+{
+  "name": "novo-portfolio-alex",
+  "version": "1.0.0",
+  "main": "000main.js",
+  "scripts": {
+    "sass": "sass source/style.scss build/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmacielferreira1/Portfolio-Alex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmacielferreira1/Portfolio-Alex/issues"
+  },
+  "homepage": "https://github.com/alexmacielferreira1/Portfolio-Alex#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.86.2"
+  }
+}

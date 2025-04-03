@@ -1,0 +1,1434 @@
+@charset "UTF-8";
+/* Estilização do corpo da página */
+body {
+  font-family: "Roboto", sans-serif; /* Define a fonte do corpo */
+  background: #0E0B1E; /* Cor de fundo */
+  color: #fafafa; /* Cor do texto */
+  font-size: 16px; /* Tamanho da fonte */
+  line-height: 22px; /* Altura da linha */
+  overflow-x: hidden; /* Evita o deslocamento horizontal */
+}
+
+/* Container principal para organizar o conteúdo */
+.container {
+  width: 90%; /* Largura de 90% da tela */
+  max-width: 1200px; /* Largura máxima de 1200px */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  display: flex; /* Usa flexbox para organizar os itens dentro */
+  background-color: #1C1C42; /* Cor de fundo do container */
+  overflow: hidden; /* Remove qualquer rolagem */
+  border-radius: 10px; /* Ajuste o valor conforme necessário */
+}
+
+/* Estilização do cabeçalho */
+header {
+  background: #1C1C42; /* Cor de fundo */
+  padding: 25px 0; /* Espaçamento superior e inferior */
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* Estilização do logotipo */
+.logo {
+  font-size: 24px; /* Tamanho da fonte */
+  font-weight: bold; /* Peso da fonte */
+  text-decoration: none; /* Remove o sublinhado */
+  color: #f9f1e6; /* Cor do texto */
+}
+
+.linkedin-logo {
+  display: block;
+  /*  align-items: center;
+   margin-left: 30px; /* Mantém o espaçamento desejado */
+}
+
+.linkedin-logo img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle; /* Garante melhor alinhamento */
+  align-items: center;
+}
+
+/* Estilos gerais de título */
+h3 {
+  margin-top: 24px; /* Margem superior */
+  font-size: 22px; /* Tamanho da fonte */
+  color: #2ABDCD; /* Cor do texto */
+  font-weight: 300; /* Peso da fonte */
+}
+
+/* Seção de introdução e imagens */
+.intro, #about > img {
+  margin-right: 32px; /* Margem à direita */
+  margin-left: 60px; /* Margem à esquerda */
+  margin-top: 24px; /* Margem superior */
+  margin-bottom: 32px; /* Margem inferior */
+}
+
+/* Filtros e interatividade */
+#filters {
+  margin-bottom: 30px; /* Margem inferior */
+}
+
+#filters .filter {
+  display: inline-block; /* Exibe como bloco em linha */
+  padding: 8px 20px; /* Padding interno */
+  cursor: pointer; /* Indica que é interativo */
+  margin-right: 10px; /* Margem à direita */
+  background-color: #f0f0f0; /* Cor de fundo */
+  border-radius: 20px; /* Bordas arredondadas */
+  font-weight: bold; /* Peso da fonte */
+  color: #333; /* Cor do texto */
+}
+
+#filters .filter.active {
+  background-color: #2ABDCD; /* Cor de fundo quando ativo */
+  color: white; /* Cor do texto quando ativo */
+}
+
+/* Estilos de portfólio e itens de imagem */
+#port {
+  list-style: none; /* Remove os marcadores da lista */
+  display: flex; /* Exibe os itens como flexbox */
+  gap: 5px; /* Espaçamento entre os itens */
+  margin-left: 0; /* Remove a margem à esquerda */
+  margin-right: 0; /* Remove a margem à direita */
+  padding: 0; /* Remove o padding */
+  flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
+  justify-content: center; /* Alinha os itens no centro */
+}
+
+#port span {
+  padding: 8px; /* Padding interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Indica que é interativo */
+  font-weight: bold; /* Peso da fonte */
+  color: #bbb; /* Cor do texto */
+}
+
+#port > ul {
+  margin-top: 24px; /* Margem superior */
+  margin-bottom: 0; /* Remove a margem inferior */
+}
+
+/* Itens de Portfólio */
+#portfolio-items {
+  display: flex; /* Exibe os itens como flexbox */
+  flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
+  justify-content: center; /* Alinha os itens no centro */
+  gap: 15px; /* Espaçamento entre os itens */
+}
+
+/* Estilos de itens filtrados */
+.filtr-item {
+  display: none; /* Oculta os itens por padrão */
+  transition: opacity 0.3s ease-in-out; /* Transição suave */
+}
+
+.filtr-item.show {
+  display: block; /* Exibe o item */
+  opacity: 1; /* Torna o item totalmente visível */
+}
+
+.filtr-item.hide {
+  display: none; /* Oculta o item */
+  opacity: 0; /* Torna o item invisível */
+}
+
+/* Imagens dentro do portfólio */
+.filtr-item img {
+  width: 100%; /* Largura total */
+  height: auto; /* Altura automática */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Filtros do cliente e software */
+#cliente, #software {
+  list-style: none; /* Remove os marcadores da lista */
+  display: flex; /* Exibe os itens como flexbox */
+  margin-left: 0; /* Remove a margem à esquerda */
+  margin-right: 0; /* Remove a margem à direita */
+  flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
+  justify-content: center; /* Alinha os itens no centro */
+}
+
+#cliente ul span, #software ul span {
+  color: rgb(104, 107, 107); /* Cor do texto */
+  font-size: 12px; /* Tamanho da fonte */
+}
+
+#cliente ul span:hover, #software ul span:hover {
+  color: rgb(251, 254, 254); /* Cor do texto ao passar o mouse */
+}
+
+/* Detalhes e ícones */
+#cliente ul span, #software ul span {
+  cursor: pointer; /* Indica que é interativo */
+}
+
+/* Estilo do rodapé */
+#rodape {
+  margin: 0 auto; /* Centraliza o rodapé */
+  margin-top: 24px; /* Margem superior */
+  margin-bottom: 24px; /* Margem inferior */
+}
+
+#rodape p {
+  margin: 0 auto; /* Centraliza o parágrafo */
+  margin-top: 24px; /* Margem superior */
+  margin-bottom: 24px; /* Margem inferior */
+}
+
+/* Imagem de perfil */
+.profile-picture {
+  display: inline-block; /* Exibe como bloco em linha */
+  padding: 10px; /* Padding interno */
+  border-radius: 50%; /* Torna a imagem redonda */
+  background: linear-gradient(45deg, #ff8a00, #2ABDCD); /* Fundo com gradiente */
+}
+
+/* Estilos de imagem do portfólio */
+.store-front {
+  width: 250px; /* Largura fixa */
+  height: 250px; /* Altura fixa */
+  border-radius: 50%; /* Torna a imagem redonda */
+  object-fit: cover; /* Faz com que a imagem cubra a área */
+  display: block; /* Exibe como bloco */
+  border: 5px solid #2ABDCD; /* Borda ao redor da imagem */
+}
+
+/* ===================== FORMULÁRIO ===================== */
+form, #redessociais {
+  max-width: 50%; /* Define uma largura máxima para o formulário */
+  padding: 24px; /* Adiciona um pouco de padding para que os campos não fiquem colados nas bordas */
+  display: inline;
+}
+
+.form-campo label {
+  font-weight: bold; /* Deixa o texto do label em negrito */
+  display: block; /* Faz com que o label ocupe toda a largura do contêiner */
+}
+
+.form-campo input,
+.form-campo textarea {
+  width: 100%; /* Faz os campos ocuparem toda a largura do contêiner */
+  display: block; /* Garante que cada campo fique em uma linha separada */
+  padding: 8px; /* Adiciona espaçamento interno para melhor usabilidade */
+}
+
+.form-campo textarea {
+  resize: none; /* Impede que o usuário redimensione a caixa de texto */
+  height: 120px; /* Define uma altura fixa para o campo de mensagem */
+}
+
+form button {
+  max-width: 120px; /* Define uma largura máxima para o botão de envio */
+  background-color: #2ABDCD;
+}
+
+/* =================== FIM DO FORMULÁRIO =================== */
+.language-bar {
+  position: fixed;
+  top: 0; /* Coloca a barra no topo */
+  left: 0;
+  width: 100%;
+  height: 20px; /* Barra fininha */
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  z-index: 1000;
+  background-color: hsla(211, 100%, 35%, 0.489);
+}
+
+.language-bar span {
+  margin-right: 4px; /* Espaçamento pequeno entre o texto e as bandeiras */
+}
+
+.language-bar img {
+  width: 18px; /* Ícones menores */
+  height: auto;
+  cursor: pointer;
+  margin-left: 2px; /* Espaçamento de 2px entre as bandeiras */
+  margin-bottom: -1px; /* Ajuste para baixar os ícones um pouco */
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.segments {
+  padding: 27px 0;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.section-title h3 {
+  font-weight: 700;
+  color: #2ABDCD;
+}
+
+.section-title.section-title-left {
+  text-align: left;
+}
+
+.title-resume {
+  text-align: left;
+}
+
+.title-resume h3 {
+  color: #2ABDCD;
+  font-size: 22px;
+  font-weight: 300;
+  display: inline-block;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.title-resume h2 {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.title-resume h2 span {
+  color: #2ABDCD;
+}
+
+/*button default*/
+.button {
+  background: #2ABDCD;
+  background: -moz-linear-gradient(-45deg, #2ABDCD 0%, rgba(156, 151, 198, 0.1019607843) 100%);
+  background: -webkit-linear-gradient(-45deg, #2ABDCD 0%, rgba(156, 151, 198, 0.1019607843) 100%);
+  background: linear-gradient(135deg, #2ABDCD 0%, rgba(156, 151, 198, 0.1019607843) 100%);
+  color: #fff;
+  border: 0;
+  margin-top: 50px;
+  border-radius: 2px;
+  padding: 13px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  z-index: 99;
+}
+
+.button:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  animation: titles 0.4s cubic-bezier(0.25, 0.61, 1, 0.47) forwards;
+  transform: translateY(100%);
+  animation-delay: 0.1s;
+  z-index: -1000;
+}
+
+@keyframes buttons {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+/*navbar*/
+.navbar {
+  margin: 27px 0;
+  color: #fff;
+  padding: 8px 40px;
+  transition: all 0.5s ease;
+}
+
+.navbar .navbar-brand h2 {
+  font-weight: 900;
+  background: -webkit-linear-gradient(right, rgba(156, 151, 198, 0.1019607843), #2ABDCD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+  transition: all 0.4s ease;
+}
+
+.navbar.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #262626;
+  margin-top: 0;
+  box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+
+/*home intro*/
+.home-intro .intro-content {
+  position: relative;
+}
+
+.home-intro .intro-content .intro-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.home-intro .intro-content .intro-caption span {
+  font-size: 26px;
+  font-weight: 300;
+  display: inline-block;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.home-intro .intro-content .intro-caption h2 {
+  font-size: 70px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(right, rgba(156, 151, 198, 0.1019607843), #2ABDCD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 87px;
+}
+
+.home-intro .intro-content .intro-image {
+  filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3));
+}
+
+.home-intro .intro-content .intro-image img {
+  width: 100%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  filter: grayscale(40%);
+}
+
+/*about*/
+.about .box-content {
+  padding: 0;
+}
+
+.about .box-content p {
+  margin: 0;
+}
+
+.about .content-left {
+  padding: 40px;
+}
+
+.about .content-left .content h2 {
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.about .content-right {
+  background: url(../images/about.jpg);
+  background-size: cover;
+  background-position: 100% 100%;
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+/*resume*/
+.resume .timeline {
+  position: relative;
+  list-style-type: none;
+}
+
+.resume .timeline::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+  background: #fff;
+}
+
+.resume .timeline ul {
+  list-style-type: none;
+}
+
+.resume .timeline ul li {
+  margin-bottom: 20px;
+}
+
+.resume .timeline > li {
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+
+.resume .timeline > li:last-child {
+  margin-bottom: 0;
+}
+
+.resume .timeline > li::before {
+  content: "";
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  left: -7px;
+  width: 16px;
+  height: 16px;
+  z-index: 400;
+}
+
+.resume .timeline > li h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.resume .my-skill .content-right .card {
+  background: transparent;
+  border: 0;
+}
+
+.resume .my-skill .content-right .card .card-header {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.resume .my-skill .content-right .card .card-header h2 .btn {
+  padding: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.resume .my-skill .content-right .card .card-header h2 .btn:hover {
+  text-decoration: none;
+}
+
+.resume .my-skill .content-right .card .card-header h2 .btn:focus {
+  text-decoration: none;
+}
+
+.resume .my-skill .content-right .card .card-header h2 .btn i {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+  top: -2px;
+}
+
+.resume .my-skill .content-right .card .card-body {
+  padding-left: 32px;
+}
+
+.resume .my-skill .content-right .card .card-body ul li {
+  margin-bottom: 20px;
+}
+
+.resume .my-skill .content-right .card .card-body ul li:last-child {
+  margin-bottom: 0;
+}
+
+.resume .my-skill .content-right .skill-title span {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.resume .my-skill .content-right .progress {
+  height: 5px;
+  border-radius: 0;
+  background: #414141;
+}
+
+.resume .my-skill .content-right .progress .progress-bar {
+  background: rgba(156, 151, 198, 0.1019607843);
+  background: -moz-linear-gradient(left, rgba(156, 151, 198, 0.1019607843) 0%, #2ABDCD 100%);
+  background: -webkit-linear-gradient(left, rgba(156, 151, 198, 0.1019607843) 0%, #2ABDCD 100%);
+  background: linear-gradient(to right, rgba(156, 151, 198, 0.1019607843) 0%, #2ABDCD 100%);
+}
+
+.resume .owl-theme .owl-dots .owl-dot span {
+  margin: 5px 10px;
+  background: #515151;
+}
+
+.resume .owl-theme .owl-dots .owl-dot.active span {
+  background: #2ABDCD;
+}
+
+.resume .owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 50px;
+}
+
+/*portfolio*/
+.portfolio .row .col-md-4 {
+  padding: 15px;
+}
+
+.portfolio .portfolio-filter-menu {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.portfolio .portfolio-filter-menu ul li {
+  display: inline-block;
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  transition: 0.4s ease-in-out;
+}
+
+.portfolio .portfolio-filter-menu ul li span {
+  z-index: 99;
+  position: relative;
+}
+
+.portfolio .portfolio-filter-menu ul li span::after {
+  content: "";
+  height: 0;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  z-index: 1;
+}
+
+.portfolio .portfolio-filter-menu ul li span:hover {
+  color: #2ABDCD;
+}
+
+.portfolio .portfolio-filter-menu ul li span:hover::after {
+  height: 10px;
+}
+
+.portfolio .portfolio-filter-menu ul li.active {
+  color: white;
+  font-weight: 200;
+}
+
+.portfolio .content-image {
+  position: relative;
+}
+
+.portfolio .content-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.portfolio .content-image:hover .portfolio-caption .title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #2ABDCD;
+  background: -moz-linear-gradient(-45deg, #2ABDCD 0%, rgba(156, 151, 198, 0) 100%);
+  background: -webkit-linear-gradient(-45deg, #2ABDCD 0%, rgba(156, 151, 198, 0) 100%);
+  background: linear-gradient(135deg, #2ABDCD 0%, rgba(156, 151, 198, 0) 100%);
+  animation: titles 600ms cubic-bezier(0.45, 0.81, 0.83, 0.18) forwards;
+  transform: translateY(101%);
+  animation-delay: 0.1s;
+}
+
+.portfolio .content-image:hover .portfolio-caption .title h4 {
+  opacity: 1;
+}
+
+.portfolio .content-image:hover .portfolio-caption .subtitle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #2ABDCD;
+  background: -moz-linear-gradient(-45deg, #2ABDCD 0%, #2ABDCD 100%);
+  background: -webkit-linear-gradient(-45deg, #2ABDCD 0%, #2ABDCD 100%);
+  background: linear-gradient(135deg, #2ABDCD 0%, #2ABDCD 100%);
+  animation: titles 500ms cubic-bezier(0.45, 0.81, 0.83, 0.18) forwards;
+  transform: translateY(101%);
+  animation-delay: 0.5s;
+}
+
+.portfolio .content-image:hover .portfolio-caption .subtitle span {
+  opacity: 1;
+}
+
+.portfolio .content-image img {
+  width: 100%;
+  border-radius: 10px; /* Ajuste o valor conforme necessário */
+}
+
+.portfolio .content-image .portfolio-caption {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  right: 30px;
+}
+
+.portfolio .content-image .portfolio-caption .title {
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transition-duration: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.portfolio .content-image .portfolio-caption .title h4 {
+  font-size: 20px;
+  font-weight: 400;
+  transition-duration: 0.1s;
+  transition-delay: 750ms;
+  opacity: 0;
+  line-height: 24px;
+}
+
+.portfolio .content-image .portfolio-caption .subtitle {
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transition-duration: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.portfolio .content-image .portfolio-caption .subtitle span {
+  transition-duration: 0.1s;
+  transition-delay: 700ms;
+  opacity: 0;
+}
+
+.portfolio .content-image .image-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 3px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  border-radius: 10px; /* Ajuste o valor conforme necessário */
+}
+
+@keyframes titles {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-101%);
+  }
+}
+@keyframes subtitles {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-101%);
+  }
+}
+/*contact*/
+.contact .content-left h2 {
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+.contact .content-left ul li {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.contact .content-left ul li a i {
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+
+.contact .content-left ul li:hover a i {
+  color: #525252;
+}
+
+.contact .content-left ul li:last-child {
+  margin-right: 0;
+}
+
+.contact .content-right .row {
+  margin-bottom: 30px;
+}
+
+.contact .content-right .row:last-child {
+  margin-bottom: 0;
+}
+
+.contact .content-right .row .form-control {
+  border: 0;
+  border-bottom: 1px solid #525252;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  color: #fff;
+}
+
+.contact .content-right .row .form-control:hover {
+  border-color: #2ABDCD;
+}
+
+.contact .content-right .row .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+  border-color: #2ABDCD;
+}
+
+.contact .content-right .button {
+  margin-top: 30px;
+}
+
+/*footer*/
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.container, #portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#foto-port img {
+  max-width: 100%;
+  height: auto;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center; /* Alinha todos os itens verticalmente */
+  justify-content: center; /* Mantém centralizado horizontalmente */
+  gap: 15px; /* Espaçamento entre os itens */
+  flex-wrap: wrap; /* Permite quebra de linha se necessário */
+  position: relative; /* Para evitar sobreposição */
+  z-index: 1; /* Mantém abaixo do menu */
+}
+
+.checkbox-container h5 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1; /* Ajusta a altura da linha para não empurrar os elementos */
+  display: flex;
+  align-items: center; /* Mantém o texto alinhado com os checkboxes */
+}
+
+.checkbox-container label {
+  display: flex;
+  align-items: center; /* Centraliza checkbox e texto */
+  gap: 5px;
+  cursor: pointer;
+  color: #fafafa;
+  font-size: 15px;
+}
+
+.checkbox-container input[type=checkbox] {
+  transform: scale(1.2); /* Ajuste opcional para aumentar um pouco o tamanho do checkbox */
+  margin: 0; /* Remove espaçamentos indesejados */
+  position: relative; /* Evita que fique sobre o menu */
+  z-index: 1;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.filter-bar div {
+  display: flex;
+  align-items: center;
+}
+
+.filter-bar input[type=checkbox] {
+  margin-right: 10px;
+}
+
+.portfolio-filter-menu {
+  margin-bottom: 20px;
+}
+
+img {
+  pointer-events: none;
+}
+
+.menu-fixo {
+  z-index: 1040; /* Certifique-se de que seja menor que o do modal */
+}
+
+#title-gal {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#pagination-controls button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Deixa os checkboxes desabilitados mais apagados */
+input[type=checkbox]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Deixa o texto do label mais apagado quando o checkbox está desabilitado */
+input[type=checkbox]:disabled + label,
+input[type=checkbox]:disabled ~ span {
+  color: #0E0B1E;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#toggle-filters {
+  font-size: 14px; /* Reduz o tamanho */
+  text-decoration: underline; /* Adiciona sublinhado */
+  cursor: pointer; /* Muda o cursor para parecer clicável */
+  display: inline-block;
+  color: #ffffff; /* Cor azul para parecer um link */
+  margin-bottom: 10px;
+}
+
+#toggle-filters:hover {
+  color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  min-width: 620px; /* Corrige erro de falta de unidade */
+  max-width: 1240px;
+  background: linear-gradient(to bottom, #121212, #1a1a1a);
+  color: white;
+  border-radius: 12px;
+  overflow: hidden; /* Impede que vaze */
+  padding: 48px; /* Reduzi o espaçamento para aproximar o conteúdo */
+  margin: 16px auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.video-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 8px; /* Aproxima o vídeo do conteúdo abaixo */
+}
+
+.video-frame {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.content-container {
+  width: 100%;
+  text-align: left;
+  margin-top: -16px; /* Aproxima o texto do vídeo */
+  flex-grow: 1;
+  overflow: hidden; /* Evita que o conteúdo ultrapasse o limite */
+}
+
+/* Estilos para o título, sinopse e informações */
+.title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.synopsis {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.client-item, .category-item, .software-item {
+  margin-bottom: 12px;
+}
+
+.client-label, .category-label, .software-label {
+  color: white;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.client-icon-container, .software-icons-container {
+  display: flex;
+  gap: 5px;
+}
+
+/* Estilo para os ícones de software */
+.software-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.software-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+.software-name {
+  color: white;
+  font-size: 1rem;
+  line-height: 30px;
+}
+
+/* Estilo para o ícone do cliente */
+.client-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.client-label {
+  color: white;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.client-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.client-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.client-name {
+  color: bbb;
+  font-size: 1.1rem;
+}
+
+#titulo-filtro {
+  font-weight: bolder;
+  color: #2ABDCD;
+}
+
+#client-filter {
+  background-color: hsla(246, 29%, 68%, 0.171);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* Evita rolagem no body quando o modal estiver aberto */
+body.modal-open {
+  overflow: hidden !important;
+}
+
+/* Estilos para centralizar o conteúdo dentro da div */
+#banner-destaque {
+  text-align: center; /* Centraliza o conteúdo dentro da div */
+  width: 100%; /* Garante que o banner ocupe toda a largura do container */
+  position: relative;
+}
+
+.banner {
+  width: 80%; /* A imagem ocupa 80% da largura da div */
+  max-width: 960px; /* Largura máxima de 960px */
+  height: auto; /* Ajusta a altura automaticamente para manter a proporção 16:9 */
+  aspect-ratio: 16/9; /* Garantindo a proporção 16:9 */
+  object-fit: cover; /* Cobre a área da imagem sem distorcer */
+  margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+.expandir {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Estilo para o título "DESTAQUE" */
+h3 {
+  text-align: left; /* Alinha à esquerda */
+  margin: 20px 0; /* Adiciona margem em cima e embaixo */
+}
+
+/* Estilo para o banner com animação de altura */
+.banner-container {
+  text-align: center; /* Centraliza o conteúdo */
+  width: 100%; /* Largura completa */
+  position: relative;
+  overflow: hidden; /* Esconde a parte da imagem que sai da div */
+  max-height: 33%; /* Altura inicial reduzida */
+  transition: max-height 0.5s ease; /* Transição suave para expandir */
+}
+
+/* A imagem inicia com 1/3 da altura */
+.banner {
+  width: 100%; /* Largura da imagem */
+  height: auto; /* Ajusta a altura automaticamente */
+  aspect-ratio: 16/9; /* Proporção 16:9 */
+  object-fit: cover; /* Cobre a área sem distorcer */
+  margin-bottom: 20px; /* Espaço abaixo da imagem */
+  transition: opacity 0.5s ease; /* Transição suave de opacidade */
+}
+
+/* Degradê aplicado na parte inferior da imagem */
+.banner.degrade {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent); /* Degradê */
+}
+
+/* Estilo para o botão de expandir */
+.expandir {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.expandir:hover {
+  color: #0056b3; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilização geral */
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 20px;
+}
+
+/* Linha vertical da timeline */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Itens da timeline */
+.timeline li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Ponto da timeline */
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+/* Estilização do conteúdo */
+.timeline-content {
+  background: rgba(0, 0, 0, 0.01);
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left: 40px; /* Para afastar do ponto */
+}
+
+.timeline-content h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.timeline-content span {
+  font-size: 14px;
+  color: #666;
+}
+
+#portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Layout responsivo */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #portfolio-items {
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .section-title h3,
+  .home-intro .intro-caption h2,
+  .about .content-left .content h2,
+  .resume .content-left .title-resume h2,
+  .contact .content-left h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+@media (max-width: 640px) {
+  .home-intro .intro-image,
+  .about .content-right {
+    display: none;
+  }
+  .portfolio .content-image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+  }
+}
+/* Estilo para a Formação */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.card-title, .card-subtitle {
+  color: #1C1C42;
+  align-items: flex-start;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Linha central */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+h4 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Itens da timeline */
+.timeline-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ponto da timeline */
+.timeline-items li {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Bolinhas conectadas */
+.timeline-items li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px #0a7c89;
+}
+
+/* Estilização do conteúdo */
+.timeline-content {
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
+  left: -8px;
+}
+
+/* Diferenciar Audiovisual e Programação */
+.timeline-items li.audiovisual .timeline-content {
+  background: rgba(30, 236, 255, 0.1);
+  border-left: 4px solid #0a7c89;
+}
+
+.timeline-items li.programacao .timeline-content {
+  background: rgba(0, 123, 255, 0.1);
+  border-left: 4px solid #007bff;
+}
+
+#banner-destaque {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.banner {
+  width: 100%;
+  transition: height 0.4s ease-in-out;
+  height: 50px; /* Altura inicial */
+}
+
+.expandido {
+  height: 450px; /* Altura expandida */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Degradê sobre a imagem */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  transition: height 0.4s ease-in-out;
+}
+
+.contraido {
+  height: 30px; /* Mostra apenas uma faixa da imagem */
+}
+
+.expandir {
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+  padding: 2px;
+  cursor: pointer;
+  background-color: #1C1C42;
+  color: rgba(255, 255, 255, 0.283);
+  display: inline-block;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-weight: lighter;
+  transition: background 0.3s;
+  font-size: 16px;
+}
+
+.expandir:hover {
+  color: white;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+.sub-info, .extra-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha à esquerda */
+  margin-top: 10px;
+}
+
+.sub-info h4, .extra-info h5 {
+  margin: 5px 0; /* Espaçamento entre os itens */
+  font-weight: normal;
+}
+
+.section-divider {
+  width: 100%;
+  height: 2px;
+  margin: 2px auto;
+  opacity: 0.02;
+  border-radius: 5px;
+}
+
+.imagem_perfil {
+  object-fit: cover; /* Faz a imagem se ajustar, cortando onde necessário */
+  border-radius: 10px; /* Opcional: Adiciona bordas arredondadas */
+}
+
+.content-right {
+  width: 100%;
+  overflow: hidden; /* Garante que nada ultrapasse os limites */
+}
+
+/*# sourceMappingURL=style.css.map */
