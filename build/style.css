@@ -24,18 +24,46 @@ body {
   margin: 0 auto; /* Centraliza o conteúdo */
   display: flex; /* Usa flexbox para organizar os itens dentro */
   background-color: #1C1C42; /* Cor de fundo do container */
-  overflow: hidden; /* Remove qualquer rolagem */
+  /*  overflow: hidden;  Remove qualquer rolagem */
   border-radius: 10px; /* Ajuste o valor conforme necessário */
 }
 
 /* Estilização do cabeçalho */
 header {
-  background: #1C1C42; /* Cor de fundo */
-  padding: 25px 0; /* Espaçamento superior e inferior */
+  background: #1C1C42;
+  padding: 25px 0; /* Esse padding é essencial para não colar a section no topo */
   position: sticky;
   top: 0;
   left: 0;
   z-index: 9999;
+}
+
+main {
+  padding-top: 100px; /* ajusta de acordo com a altura da sua navbar */
+}
+
+#cabecalho {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+#cabecalho .nav-item {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+#cabecalho .nav-link {
+  padding: 0.4rem 0.6rem; /* diminui altura e largura interna */
+  font-size: 0.9rem; /* se quiser ajustar o tamanho da fonte também */
+}
+
+section {
+  scroll-margin-top: 100px; /* ajusta conforme a altura do header */
 }
 
 /* Estilização do logotipo */
@@ -88,7 +116,7 @@ h3 {
   background-color: #ffffff; /* Cor de fundo */
   border-radius: 20px; /* Bordas arredondadas */
   font-weight: bold; /* Peso da fonte */
-  color: #333; /* Cor do texto */
+  color: #e1e1e1; /* Cor do texto */
 }
 
 #filters .filter.active {
@@ -113,7 +141,7 @@ h3 {
   border-radius: 5px; /* Bordas arredondadas */
   cursor: pointer; /* Indica que é interativo */
   font-weight: bold; /* Peso da fonte */
-  color: #333; /* Cor do texto */
+  color: #e1e1e1; /* Cor do texto */
 }
 
 #port > ul {
@@ -163,7 +191,7 @@ h3 {
 }
 
 #cliente ul span, #software ul span {
-  color: #333; /* Cor do texto */
+  color: #e1e1e1; /* Cor do texto */
   font-size: 12px; /* Tamanho da fonte */
 }
 
@@ -194,7 +222,7 @@ h3 {
   display: inline-block; /* Exibe como bloco em linha */
   padding: 10px; /* Padding interno */
   border-radius: 50%; /* Torna a imagem redonda */
-  background: linear-gradient(45deg, #ff8a00, #2ABDCD); /* Fundo com gradiente */
+  background: linear-gradient(45deg, #2ABDCD, #2ABDCD); /* Fundo com gradiente */
 }
 
 /* Estilos de imagem do portfólio */
@@ -303,6 +331,7 @@ ul {
 
 .title-resume {
   text-align: left;
+  width: 100%;
 }
 
 .title-resume h3 {
@@ -327,9 +356,9 @@ ul {
 /*button default*/
 .button {
   background: #2ABDCD;
-  background: -moz-linear-gradient(-45deg, #2ABDCD 0%, #333 100%);
-  background: -webkit-linear-gradient(-45deg, #2ABDCD 0%, #333 100%);
-  background: linear-gradient(135deg, #2ABDCD 0%, #333 100%);
+  background: -moz-linear-gradient(-45deg, #2ABDCD 0%, #e1e1e1 100%);
+  background: -webkit-linear-gradient(-45deg, #2ABDCD 0%, #e1e1e1 100%);
+  background: linear-gradient(135deg, #2ABDCD 0%, #e1e1e1 100%);
   color: #ffffff;
   border: 0;
   margin-top: 50px;
@@ -368,7 +397,7 @@ ul {
 }
 /*navbar*/
 .navbar {
-  margin: 27px 0;
+  margin: 10px 0;
   color: #ffffff;
   padding: 8px 40px;
   transition: all 0.5s ease;
@@ -376,7 +405,7 @@ ul {
 
 .navbar .navbar-brand h2 {
   font-weight: 900;
-  background: -webkit-linear-gradient(right, #333, #2ABDCD);
+  background: -webkit-linear-gradient(right, #e1e1e1, #2ABDCD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -385,9 +414,9 @@ ul {
   color: #ffffff;
   font-weight: 500;
   letter-spacing: 1px;
-  padding-left: 12px;
-  padding-right: 12px;
   transition: all 0.4s ease;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .navbar.fix {
@@ -400,6 +429,12 @@ ul {
   margin-top: 0;
   box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease;
+}
+
+.nav-pills .nav-link {
+  padding: 0.5rem 1rem; /* Diminua esses valores, se necessário */
+  margin: 0;
+  white-space: nowrap;
 }
 
 /*home intro*/
@@ -425,7 +460,7 @@ ul {
 .home-intro .intro-content .intro-caption h2 {
   font-size: 70px;
   font-weight: 900;
-  background: -webkit-linear-gradient(right, #333, #2ABDCD);
+  background: -webkit-linear-gradient(right, #e1e1e1, #2ABDCD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 87px;
@@ -575,19 +610,19 @@ ul {
 .resume .my-skill .content-right .progress {
   height: 5px;
   border-radius: 0;
-  background: #414141;
+  background: #e1e1e1;
 }
 
 .resume .my-skill .content-right .progress .progress-bar {
-  background: #333;
-  background: -moz-linear-gradient(left, #333 0%, #2ABDCD 100%);
-  background: -webkit-linear-gradient(left, #333 0%, #2ABDCD 100%);
-  background: linear-gradient(to right, #333 0%, #2ABDCD 100%);
+  background: #e1e1e1;
+  background: -moz-linear-gradient(left, #e1e1e1 0%, #2ABDCD 100%);
+  background: -webkit-linear-gradient(left, #e1e1e1 0%, #2ABDCD 100%);
+  background: linear-gradient(to right, #e1e1e1 0%, #2ABDCD 100%);
 }
 
 .resume .owl-theme .owl-dots .owl-dot span {
   margin: 5px 10px;
-  background: #515151;
+  background: #e1e1e1;
 }
 
 .resume .owl-theme .owl-dots .owl-dot.active span {
@@ -790,7 +825,7 @@ ul {
 }
 
 .contact .content-left ul li:hover a i {
-  color: #333;
+  color: #e1e1e1;
 }
 
 .contact .content-left ul li:last-child {
@@ -807,7 +842,7 @@ ul {
 
 .contact .content-right .row .form-control {
   border: 0;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #e1e1e1;
   border-radius: 0;
   background: transparent;
   padding: 0;
@@ -952,7 +987,7 @@ input[type=checkbox]:disabled ~ span {
 }
 
 #toggle-filters:hover {
-  color: #0056b3; /* Cor mais escura ao passar o mouse */
+  color: #007bff; /* Cor mais escura ao passar o mouse */
 }
 
 .hidden {
@@ -1177,11 +1212,6 @@ h3 {
   margin: auto;
 }
 
-h3 {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
 /* Timeline */
 .timeline {
   position: relative;
@@ -1238,7 +1268,7 @@ h3 {
 
 .timeline-content span {
   font-size: 14px;
-  color: #666;
+  color: #e1e1e1;
 }
 
 #portfolio-items {
@@ -1283,17 +1313,11 @@ h3 {
 .container {
   max-width: 900px;
   margin: auto;
-  padding-top: 30px;
 }
 
 .card-title, .card-subtitle {
   color: #1C1C42;
   align-items: flex-start;
-}
-
-h3 {
-  font-weight: bold;
-  margin-bottom: 20px;
 }
 
 /* Linha central */
@@ -1332,7 +1356,16 @@ h4 {
   border-radius: 50%;
   background-color: #ffffff;
   border: 3px solid #ffffff;
+  box-shadow: 0 0 0 3px #007bff;
+}
+
+/* Somente o box-shadow diferente por categoria */
+.timeline-items li.audiovisual::before {
   box-shadow: 0 0 0 3px #2ABDCD;
+}
+
+.timeline-items li.programacao::before {
+  box-shadow: 0 0 0 3px #007bff;
 }
 
 /* Estilização do conteúdo */
@@ -1392,7 +1425,7 @@ h4 {
   padding: 2px;
   cursor: pointer;
   background-color: #1C1C42;
-  color: #333;
+  color: #e1e1e1;
   display: inline-block;
   border-radius: 5px;
   width: 100%;

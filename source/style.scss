@@ -19,18 +19,44 @@ body {
     margin: 0 auto; /* Centraliza o conteúdo */
     display: flex; /* Usa flexbox para organizar os itens dentro */
     background-color: variaveis.$cor_principal; /* Cor de fundo do container */
-    overflow: hidden; /* Remove qualquer rolagem */
+  /*  overflow: hidden;  Remove qualquer rolagem */
     border-radius: 10px; /* Ajuste o valor conforme necessário */
 }
 
 /* Estilização do cabeçalho */
 header {
-    background: variaveis.$cor_principal; /* Cor de fundo */
-    padding: 25px 0; /* Espaçamento superior e inferior */
+    background: variaveis.$cor_principal;
+    padding: 25px 0; /* Esse padding é essencial para não colar a section no topo */
     position: sticky;
     top: 0;
     left: 0;
     z-index: 9999;
+}
+
+main {
+    padding-top: 100px; /* ajusta de acordo com a altura da sua navbar */
+  }
+#cabecalho {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.25rem;
+}
+
+#cabecalho .nav-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+#cabecalho .nav-link {
+    padding: 0.4rem 0.6rem; /* diminui altura e largura interna */
+    font-size: 0.9rem; /* se quiser ajustar o tamanho da fonte também */
+}
+section {
+    scroll-margin-top: 100px; /* ajusta conforme a altura do header */
 }
 
 /* Estilização do logotipo */
@@ -207,7 +233,7 @@ h3 {
     display: inline-block; /* Exibe como bloco em linha */
     padding: 10px; /* Padding interno */
     border-radius: 50%; /* Torna a imagem redonda */
-    background: linear-gradient(45deg, variaveis.$cor_imagem_perfil1, variaveis.$cor_texto_destaque_azul); /* Fundo com gradiente */
+    background: linear-gradient(45deg, variaveis.$cor_texto_destaque_azul, variaveis.$cor_texto_destaque_azul); /* Fundo com gradiente */
 }
 
 
@@ -315,6 +341,7 @@ ul {
 
 .title-resume {
     text-align: left;
+    width: 100%;
 }
 .title-resume h3 {
     color: variaveis.$cor_texto_destaque_azul;
@@ -376,7 +403,7 @@ ul {
 }
 /*navbar*/
 .navbar {
-    margin: 27px 0;
+    margin: 10px 0;
     color: variaveis.$cor_branco;
     padding: 8px 40px;
     transition: all .5s ease;
@@ -391,9 +418,9 @@ ul {
     color: variaveis.$cor_branco;
     font-weight: 500;
     letter-spacing: 1px;
-    padding-left: 12px;
-    padding-right: 12px;
     transition: all .4s ease;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 .navbar.fix {
     position: fixed;
@@ -407,6 +434,11 @@ ul {
     transition: all .5s ease;
 }
 
+.nav-pills .nav-link {
+    padding: 0.5rem 1rem; /* Diminua esses valores, se necessário */
+    margin: 0;
+    white-space: nowrap;
+}
 /*home intro*/
 .home-intro .intro-content {
     position: relative;
@@ -553,7 +585,7 @@ ul {
 .resume .my-skill .content-right .progress {
     height: 5px;
     border-radius: 0;
-    background: #414141;
+    background: variaveis.$cor_cinza_1;
 }
 .resume .my-skill .content-right .progress .progress-bar {
     background: variaveis.$cor_cinza_1;
@@ -563,7 +595,7 @@ ul {
 }
 .resume .owl-theme .owl-dots .owl-dot span {
     margin: 5px 10px;
-    background: #515151;
+    background: variaveis.$cor_cinza_1;
 }
 .resume .owl-theme .owl-dots .owl-dot.active span {
     background: variaveis.$cor_texto_destaque_azul;
@@ -902,7 +934,7 @@ input[type="checkbox"]:disabled ~ span {
 }
 
 #toggle-filters:hover {
-    color: #0056b3; /* Cor mais escura ao passar o mouse */
+    color: variaveis.$cor_azul_PROG; /* Cor mais escura ao passar o mouse */
 }
 
 .hidden {
@@ -1074,7 +1106,7 @@ body.modal-open {
         .expandir {
             font-size: 1.2rem;
             font-weight: bold;
-            color: #007bff;
+            color: variaveis.$cor_azul_PROG;
             cursor: pointer;
         }
 
@@ -1129,10 +1161,7 @@ body.modal-open {
     margin: auto;
 }
 
-h3 {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+
 
 /* Timeline */
 .timeline {
@@ -1190,7 +1219,7 @@ h3 {
 
 .timeline-content span {
     font-size: 14px;
-    color: #666;
+    color: variaveis.$cor_cinza_1;
 }
 
 #portfolio-items {
@@ -1250,7 +1279,7 @@ h3 {
 .container {
     max-width: 900px;
     margin: auto;
-    padding-top: 30px;
+
 }
 
 .card-title, .card-subtitle {
@@ -1258,10 +1287,6 @@ h3 {
     align-items: flex-start;
 }
 
-h3 {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
 /* Linha central */
 .timeline {
@@ -1289,6 +1314,7 @@ h4 {
     margin: 20px 0;
 }
 
+
 /* Bolinhas conectadas */
 .timeline-items li::before {
     content: "";
@@ -1300,7 +1326,16 @@ h4 {
     border-radius: 50%;
     background-color: variaveis.$cor_branco;
     border: 3px solid variaveis.$cor_branco;
+    box-shadow: 0 0 0 3px variaveis.$cor_azul_PROG;
+}
+
+/* Somente o box-shadow diferente por categoria */
+.timeline-items li.audiovisual::before {
     box-shadow: 0 0 0 3px variaveis.$cor_texto_destaque_azul;
+}
+
+.timeline-items li.programacao::before {
+    box-shadow: 0 0 0 3px variaveis.$cor_azul_PROG;
 }
 
 
