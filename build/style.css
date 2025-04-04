@@ -1,9 +1,17 @@
 @charset "UTF-8";
+/* Reset básico para garantir uma base uniforme em todos os navegadores */
+* {
+  margin: 0; /* Remove a margem de todos os elementos */
+  padding: 0; /* Remove o padding de todos os elementos */
+  box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho total dos elementos */
+  font-family: Arial, sans-serif; /* Define a fonte padrão */
+}
+
 /* Estilização do corpo da página */
 body {
   font-family: "Roboto", sans-serif; /* Define a fonte do corpo */
   background: #0E0B1E; /* Cor de fundo */
-  color: #fafafa; /* Cor do texto */
+  color: #ffffff; /* Cor do texto */
   font-size: 16px; /* Tamanho da fonte */
   line-height: 22px; /* Altura da linha */
   overflow-x: hidden; /* Evita o deslocamento horizontal */
@@ -35,13 +43,13 @@ header {
   font-size: 24px; /* Tamanho da fonte */
   font-weight: bold; /* Peso da fonte */
   text-decoration: none; /* Remove o sublinhado */
-  color: #f9f1e6; /* Cor do texto */
+  color: #ffffff; /* Cor do texto */
 }
 
 .linkedin-logo {
   display: block;
   /*  align-items: center;
-   margin-left: 30px; /* Mantém o espaçamento desejado */
+      margin-left: 30px; /* Mantém o espaçamento desejado */
 }
 
 .linkedin-logo img {
@@ -77,7 +85,7 @@ h3 {
   padding: 8px 20px; /* Padding interno */
   cursor: pointer; /* Indica que é interativo */
   margin-right: 10px; /* Margem à direita */
-  background-color: #f0f0f0; /* Cor de fundo */
+  background-color: #ffffff; /* Cor de fundo */
   border-radius: 20px; /* Bordas arredondadas */
   font-weight: bold; /* Peso da fonte */
   color: #333; /* Cor do texto */
@@ -85,7 +93,7 @@ h3 {
 
 #filters .filter.active {
   background-color: #2ABDCD; /* Cor de fundo quando ativo */
-  color: white; /* Cor do texto quando ativo */
+  color: #ffffff; /* Cor do texto quando ativo */
 }
 
 /* Estilos de portfólio e itens de imagem */
@@ -105,7 +113,7 @@ h3 {
   border-radius: 5px; /* Bordas arredondadas */
   cursor: pointer; /* Indica que é interativo */
   font-weight: bold; /* Peso da fonte */
-  color: #bbb; /* Cor do texto */
+  color: #333; /* Cor do texto */
 }
 
 #port > ul {
@@ -155,7 +163,7 @@ h3 {
 }
 
 #cliente ul span, #software ul span {
-  color: rgb(104, 107, 107); /* Cor do texto */
+  color: #333; /* Cor do texto */
   font-size: 12px; /* Tamanho da fonte */
 }
 
@@ -257,11 +265,11 @@ form button {
 }
 
 a {
-  color: #fff;
+  color: #ffffff;
 }
 
 a:hover {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -319,10 +327,10 @@ ul {
 /*button default*/
 .button {
   background: #2ABDCD;
-  background: -moz-linear-gradient(-45deg, #2ABDCD 0%, rgba(156, 151, 198, 0.1019607843) 100%);
-  background: -webkit-linear-gradient(-45deg, #2ABDCD 0%, rgba(156, 151, 198, 0.1019607843) 100%);
-  background: linear-gradient(135deg, #2ABDCD 0%, rgba(156, 151, 198, 0.1019607843) 100%);
-  color: #fff;
+  background: -moz-linear-gradient(-45deg, #2ABDCD 0%, #333 100%);
+  background: -webkit-linear-gradient(-45deg, #2ABDCD 0%, #333 100%);
+  background: linear-gradient(135deg, #2ABDCD 0%, #333 100%);
+  color: #ffffff;
   border: 0;
   margin-top: 50px;
   border-radius: 2px;
@@ -361,20 +369,20 @@ ul {
 /*navbar*/
 .navbar {
   margin: 27px 0;
-  color: #fff;
+  color: #ffffff;
   padding: 8px 40px;
   transition: all 0.5s ease;
 }
 
 .navbar .navbar-brand h2 {
   font-weight: 900;
-  background: -webkit-linear-gradient(right, rgba(156, 151, 198, 0.1019607843), #2ABDCD);
+  background: -webkit-linear-gradient(right, #333, #2ABDCD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
   letter-spacing: 1px;
   padding-left: 12px;
@@ -417,7 +425,7 @@ ul {
 .home-intro .intro-content .intro-caption h2 {
   font-size: 70px;
   font-weight: 900;
-  background: -webkit-linear-gradient(right, rgba(156, 151, 198, 0.1019607843), #2ABDCD);
+  background: -webkit-linear-gradient(right, #333, #2ABDCD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 87px;
@@ -474,7 +482,7 @@ ul {
   width: 2px;
   height: 100%;
   z-index: 400;
-  background: #fff;
+  background: #ffffff;
 }
 
 .resume .timeline ul {
@@ -496,7 +504,7 @@ ul {
 
 .resume .timeline > li::before {
   content: "";
-  background: #fff;
+  background: #ffffff;
   display: inline-block;
   position: absolute;
   border-radius: 50%;
@@ -527,7 +535,7 @@ ul {
   padding: 0;
   font-size: 22px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
 }
 
 .resume .my-skill .content-right .card .card-header h2 .btn:hover {
@@ -539,7 +547,7 @@ ul {
 }
 
 .resume .my-skill .content-right .card .card-header h2 .btn i {
-  color: #fff;
+  color: #ffffff;
   margin-right: 15px;
   font-size: 16px;
   position: relative;
@@ -571,10 +579,10 @@ ul {
 }
 
 .resume .my-skill .content-right .progress .progress-bar {
-  background: rgba(156, 151, 198, 0.1019607843);
-  background: -moz-linear-gradient(left, rgba(156, 151, 198, 0.1019607843) 0%, #2ABDCD 100%);
-  background: -webkit-linear-gradient(left, rgba(156, 151, 198, 0.1019607843) 0%, #2ABDCD 100%);
-  background: linear-gradient(to right, rgba(156, 151, 198, 0.1019607843) 0%, #2ABDCD 100%);
+  background: #333;
+  background: -moz-linear-gradient(left, #333 0%, #2ABDCD 100%);
+  background: -webkit-linear-gradient(left, #333 0%, #2ABDCD 100%);
+  background: linear-gradient(to right, #333 0%, #2ABDCD 100%);
 }
 
 .resume .owl-theme .owl-dots .owl-dot span {
@@ -606,7 +614,7 @@ ul {
   cursor: pointer;
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   letter-spacing: 1px;
   transition: 0.4s ease-in-out;
 }
@@ -637,7 +645,7 @@ ul {
 }
 
 .portfolio .portfolio-filter-menu ul li.active {
-  color: white;
+  color: #ffffff;
   font-weight: 200;
 }
 
@@ -782,7 +790,7 @@ ul {
 }
 
 .contact .content-left ul li:hover a i {
-  color: #525252;
+  color: #333;
 }
 
 .contact .content-left ul li:last-child {
@@ -799,11 +807,11 @@ ul {
 
 .contact .content-right .row .form-control {
   border: 0;
-  border-bottom: 1px solid #525252;
+  border-bottom: 1px solid #333;
   border-radius: 0;
   background: transparent;
   padding: 0;
-  color: #fff;
+  color: #ffffff;
 }
 
 .contact .content-right .row .form-control:hover {
@@ -955,7 +963,7 @@ input[type=checkbox]:disabled ~ span {
   min-width: 620px; /* Corrige erro de falta de unidade */
   max-width: 1240px;
   background: linear-gradient(to bottom, #121212, #1a1a1a);
-  color: white;
+  color: #ffffff;
   border-radius: 12px;
   overflow: hidden; /* Impede que vaze */
   padding: 48px; /* Reduzi o espaçamento para aproximar o conteúdo */
@@ -995,7 +1003,7 @@ input[type=checkbox]:disabled ~ span {
 
 /* Estilos para o título, sinopse e informações */
 .title {
-  color: white;
+  color: #ffffff;
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 16px;
@@ -1003,7 +1011,7 @@ input[type=checkbox]:disabled ~ span {
 }
 
 .synopsis {
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   margin-bottom: 16px;
   line-height: 1.5;
@@ -1020,7 +1028,7 @@ input[type=checkbox]:disabled ~ span {
 }
 
 .client-label, .category-label, .software-label {
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   margin-right: 10px;
 }
@@ -1045,7 +1053,7 @@ input[type=checkbox]:disabled ~ span {
 }
 
 .software-name {
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   line-height: 30px;
 }
@@ -1058,7 +1066,7 @@ input[type=checkbox]:disabled ~ span {
 }
 
 .client-label {
-  color: white;
+  color: #ffffff;
   font-size: 1.1rem;
   margin-right: 10px;
 }
@@ -1160,7 +1168,7 @@ h3 {
 }
 
 .expandir:hover {
-  color: #0056b3; /* Muda a cor ao passar o mouse */
+  color: #007bff; /* Muda a cor ao passar o mouse */
 }
 
 /* Estilização geral */
@@ -1190,7 +1198,7 @@ h3 {
   top: 0;
   width: 4px;
   height: 100%;
-  background: #fff;
+  background: #ffffff;
   border-radius: 2px;
 }
 
@@ -1211,7 +1219,7 @@ h3 {
   height: 14px;
   background: #ffffff;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid #ffffff;
 }
 
 /* Estilização do conteúdo */
@@ -1322,9 +1330,9 @@ h4 {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #fff;
-  border: 3px solid #fff;
-  box-shadow: 0 0 0 3px #0a7c89;
+  background-color: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 3px #2ABDCD;
 }
 
 /* Estilização do conteúdo */
@@ -1339,7 +1347,7 @@ h4 {
 /* Diferenciar Audiovisual e Programação */
 .timeline-items li.audiovisual .timeline-content {
   background: rgba(30, 236, 255, 0.1);
-  border-left: 4px solid #0a7c89;
+  border-left: 4px solid #2ABDCD;
 }
 
 .timeline-items li.programacao .timeline-content {
@@ -1384,7 +1392,7 @@ h4 {
   padding: 2px;
   cursor: pointer;
   background-color: #1C1C42;
-  color: rgba(255, 255, 255, 0.283);
+  color: #333;
   display: inline-block;
   border-radius: 5px;
   width: 100%;
@@ -1396,7 +1404,7 @@ h4 {
 }
 
 .expandir:hover {
-  color: white;
+  color: #ffffff;
   font-style: normal;
   font-weight: lighter;
 }
