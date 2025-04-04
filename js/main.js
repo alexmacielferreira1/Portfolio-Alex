@@ -1,11 +1,13 @@
 window.onload = function () {
-    var fileUrl = 'portfolio-excel.xlsx';
+    const fileUrl = 'https://docs.google.com/spreadsheets/d/12_g-aSPwNdqo5uyUnqlG7Fs-xY27y37s/export?format=csv&gid=949877154';
+
     fetch(fileUrl)
-        .then(response => response.arrayBuffer())
-        .then(data => {
-            var workbook = XLSX.read(data, { type: 'array' });
-            var sheet = workbook.Sheets[workbook.SheetNames[0]];
-            var jsonData = XLSX.utils.sheet_to_json(sheet);
+        .then(response => response.text())
+        .then(csv => {
+            const workbook = XLSX.read(csv, { type: 'string' });
+            const sheet = workbook.Sheets[workbook.SheetNames[0]];
+            const jsonData = XLSX.utils.sheet_to_json(sheet);
+            console.log(jsonData); // Aqui você usa os dados como quiser
 
             // Definindo as variáveis para armazenar as seleções dos filtros
             var selectedActivities = new Set();
