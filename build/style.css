@@ -1472,4 +1472,55 @@ h4 {
   overflow: hidden; /* Garante que nada ultrapasse os limites */
 }
 
+.titulo-curso {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.instituicao {
+  color: #fff;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.topico-label {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: normal;
+  margin-right: 4px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  color: white;
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  margin: 4px 6px 4px 0;
+  white-space: nowrap;
+}
+
+.audiovisual .badge {
+  background-color: rgba(86, 204, 242, 0.1);
+  border: 1px solid #56CCF2;
+}
+
+.programacao .badge {
+  background-color: rgba(47, 128, 237, 0.1);
+  border: 1px solid #2F80ED;
+}
+
+.topico-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  padding-left: 0;
+  list-style: none;
+}
+
 /*# sourceMappingURL=style.css.map */
