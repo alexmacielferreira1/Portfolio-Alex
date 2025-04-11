@@ -321,7 +321,7 @@ ul {
 }
 
 .section-title h3 {
-  font-weight: 700;
+  font-weight: 600;
   color: #2ABDCD;
 }
 
@@ -345,12 +345,16 @@ ul {
 }
 
 .title-resume h2 {
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 900;
 }
 
 .title-resume h2 span {
   color: #2ABDCD;
+}
+
+.title-resume_PROG {
+  color: #007bff;
 }
 
 /*button default*/

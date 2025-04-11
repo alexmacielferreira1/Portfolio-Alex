@@ -332,7 +332,7 @@ ul {
     text-align: center;
 }
 .section-title h3 {
-    font-weight: 700;
+    font-weight: 600;
     color: variaveis.$cor_texto_destaque_azul;
 }
 .section-title.section-title-left {
@@ -353,11 +353,15 @@ ul {
     text-transform: uppercase;
 }
 .title-resume h2 {
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 900;
 }
 .title-resume h2 span {
     color: variaveis.$cor_texto_destaque_azul;
+}
+
+.title-resume_PROG {
+    color: variaveis.$cor_azul_PROG;
 }
 
 /*button default*/
