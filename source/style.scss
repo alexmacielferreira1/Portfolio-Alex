@@ -214,7 +214,17 @@ h3 {
 }
 
 
+#audiovisual-tab {
+    color: variaveis.$cor_branco;
+    background-color: variaveis.$cor_principal;
+    border-color: variaveis.$cor_branco;
+}
 
+#programacao-tab {
+    color: variaveis.$cor_branco;
+    background-color: variaveis.$cor_principal;
+    border-color: variaveis.$cor_branco;
+}
 /* Estilo do rodapé */
 #rodape {
     margin: 0 auto; /* Centraliza o rodapé */
@@ -236,6 +246,37 @@ h3 {
     background: linear-gradient(45deg, variaveis.$cor_texto_destaque_azul, variaveis.$cor_texto_destaque_azul); /* Fundo com gradiente */
 }
 
+section {
+    padding-top: 1rem; /* Adiciona respiro superior à seção */
+}
+
+.card-hover {
+    margin-top: 2rem; /* Adiciona espaço entre os cards e o topo */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Centraliza os itens dentro do card */
+    text-align: center; /* Garante que o texto também seja centralizado */
+}
+
+.card-body .mt-4 {
+    display: flex;
+    justify-content: center; /* Centraliza os botões dentro do card */
+    gap: 1rem; /* Adiciona um pequeno espaço entre os botões */
+}
 
 /* Estilos de imagem do portfólio */
 .store-front {
@@ -364,6 +405,43 @@ ul {
     color: variaveis.$cor_azul_PROG;
 }
 
+.portfolio-wrapper {
+    .nav-tabs {
+        .nav-link {
+            // Removendo o estilo padrão de fundo e borda
+            &.active {
+                background-color: transparent; // Remove o fundo padrão do botão ativo
+                border-color: transparent;     // Remove a borda padrão do botão ativo
+            }
+
+            &.active {
+                border-bottom: 2px solid variaveis.$cor_texto_destaque_azul; // Linha azul para Audiovisual
+            }
+
+            &:hover {
+                border-bottom: 2px solid variaveis.$cor_azul_PROG; // Linha para Programação no hover
+            }
+        }
+
+        #audiovisual-tab.active {
+            border-bottom: 2px solid variaveis.$cor_texto_destaque_azul; // Linha de destaque específica para Audiovisual
+        }
+
+        #programacao-tab.active {
+            border-bottom: 2px solid variaveis.$cor_azul_PROG; // Linha de destaque específica para Programação
+        }
+    }
+}
+
+.title-resume > h4 {
+    font-size: 18px;         /* Texto menor */
+    color: rgba(255, 255, 255, 0.21);             /* Cor apagada (cinza médio) */
+    text-align: left;        /* Alinhamento à esquerda */
+    line-height: 1.6;        /* Espaçamento entre as linhas */
+    white-space: pre-line;   /* Mantém as quebras de linha no conteúdo */
+    margin-top: 15px;        /* Espaço entre o h2 e o h4 */
+}
+
 /*button default*/
 .button {
     background: variaveis.$cor_texto_destaque_azul;
@@ -436,7 +514,7 @@ ul {
     margin-top: 0;
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
     transition: all .5s ease;
-}
+}c
 
 .nav-pills .nav-link {
     padding: 0.5rem 1rem; /* Diminua esses valores, se necessário */
@@ -1470,24 +1548,28 @@ h4 {
     margin-top: 0.5rem;
   }
   
-  .badge {
+  .badge, .badge-tec {
     display: inline-block;
     color: white;
-    border-radius: 12px;
-    padding: 4px 10px;
-    font-size: 0.75rem;
-    margin: 4px 6px 4px 0;
-    white-space: nowrap;
+    background-color: rgba(47, 128, 237, 0.1); // cor de fundo suave
+    border: 1px solid variaveis.$cor_azul_PROG; // cor da borda variável
+    border-radius: 15px; // mais arredondado
+    padding: 4px 10px; // espaço interno equilibrado
+    font-size: 0.75rem; // tamanho de fonte do badge original
+    font-weight: 500; // adicionado do .badge-tec
+    margin: 4px 6px 4px 0; // margem do original
+    white-space: nowrap; // evita quebra
   }
+  
   
   .audiovisual .badge {
     background-color: rgba(86, 204, 242, 0.1);
-    border: 1px solid #56CCF2;
+    border: 1px solid variaveis.$cor_texto_destaque_azul;
   }
   
   .programacao .badge {
     background-color: rgba(47, 128, 237, 0.1);
-    border: 1px solid #2F80ED;
+    border: 1px solid variaveis.$cor_azul_PROG;
   }
   
   .topico-lista {
@@ -1496,4 +1578,9 @@ h4 {
     gap: 4px 6px;
     padding-left: 0;
     list-style: none;
+  }
+
+  .descricao-variavel {
+    font-size: 0.85em;
+    color: variaveis.$cor_fundo;
   }
