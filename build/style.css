@@ -409,6 +409,7 @@ ul {
   border-bottom: 2px solid #2ABDCD;
 }
 .portfolio-wrapper .nav-tabs .nav-link:hover {
+  background-color: transparent;
   border-bottom: 2px solid #007bff;
 }
 .portfolio-wrapper .nav-tabs #audiovisual-tab.active {
@@ -1371,6 +1372,9 @@ h3 {
     font-size: 32px;
     text-align: center;
   }
+  .ocultar-mobile {
+    display: none;
+  }
 }
 @media (max-width: 640px) {
   .home-intro .intro-image,
@@ -1575,8 +1579,8 @@ h4 {
   background-color: rgba(47, 128, 237, 0.1);
   border: 1px solid #007bff;
   border-radius: 15px;
-  padding: 4px 10px;
-  font-size: 0.75rem;
+  padding: 4px 8px;
+  font-size: 0.5rem;
   font-weight: 500;
   margin: 4px 6px 4px 0;
   white-space: nowrap;
@@ -1603,6 +1607,55 @@ h4 {
 .descricao-variavel {
   font-size: 0.85em;
   color: #0E0B1E;
+}
+
+/* Remove o estilo do foco ao clicar */
+.nav-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Impede o aumento do tamanho do botão ao ser clicado */
+.nav-link:active {
+  transform: none;
+}
+
+.language-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  padding: 8px 16px;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  z-index: 998; /* abaixo do header */
+  position: relative;
+}
+
+.lang-btn {
+  width: 24px;
+  height: auto;
+  cursor: pointer;
+}
+
+.whatsapp-link {
+  position: fixed;
+  bottom: 20px; /* Distância do fundo da tela */
+  right: 20px; /* Distância da direita da tela */
+  background-color: #25D366; /* Cor de fundo verde do WhatsApp */
+  border-radius: 50%; /* Deixa o botão redondo */
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  z-index: 1000; /* Fica acima de outros elementos */
+  transition: transform 0.3s ease; /* Transição suave */
+}
+
+.whatsapp-link i {
+  color: white; /* Cor do ícone */
+  font-size: 30px; /* Tamanho do ícone */
+}
+
+.whatsapp-link:hover {
+  transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -63,6 +63,7 @@ document.addEventListener('click', function (event) {
         <!-- Category -->
         <div class="category-item">
             <strong class="category-label">Categoria:</strong>
+            <span class="badge audiovisual">
             <span>${category}</span>
         </div>
 
@@ -102,7 +103,7 @@ function generateSoftwareIcons(softwareList) {
     return softwareList.split(',').map(software => {
         const trimmedSoftware = software.trim();
         return `
-            <span class="software-item">
+            <span class="badge audiovisual">
                 <img src="./icones/icone_${trimmedSoftware}.png" alt="${trimmedSoftware}" class="software-icon">
                 <span class="software-name">${trimmedSoftware}</span>
             </span>
@@ -110,11 +111,13 @@ function generateSoftwareIcons(softwareList) {
     }).join(' ');
 }
 
+
 function generateClientIcon(client) {
     if (!client) return '';
     return `
         <div class="client-item">
             <strong class="client-label">Cliente:</strong>
+            <span class="badge audiovisual">
             <span class="client-icon-wrapper">
                 <img src="./icones/icone_${client}.png" alt="${client}" class="client-icon">
                 <span class="client-name">${client}</span>

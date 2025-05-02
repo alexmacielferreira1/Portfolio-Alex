@@ -26,12 +26,21 @@
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="./build/style.css">
+
 </head>
 <body id="home">
   <!-- Header com o Menu Responsivo -->
+  <div class="language-bar">
+    <span id="language-text">Escolha o idioma / Choose the language:</span>
+    
+    <!-- Botões de idioma -->
+    <img src="./images/frag_PT-BR.png" alt="Português" id="lang-pt" class="lang-btn" data-lang="pt">
+    <img src="./images/flag_UK-US.png" alt="English" id="lang-en" class="lang-btn" data-lang="en">
+  </div>
   <header class="navbar navbar-expand-lg sticky-top" id="cabecalho" data-bs-smooth-scroll="true">
+ 
     <div class="container">
-        <h1 class="navbar-brand m-0 section-title mb-4">ALEX MACIEL FERREIRA</h1>
+        <h1 class="navbar-brand m-0 section-title">ALEX MACIEL FERREIRA</h1>
 
         <!-- Botão do menu responsivo -->
         <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navegacao" aria-controls="menu-navegacao" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +49,7 @@
 
         <!-- Menu colapsável -->
         <div class="collapse navbar-collapse justify-content-end" id="menu-navegacao">
-            <ul class="nav nav-pills d-block d-lg-flex mb-4" id="cabecalho">
+            <ul class="nav nav-pills d-block d-lg-flex " id="cabecalho">
                 <li class="nav-item fw-bold">
                     <a class="nav-link" href="#home">
                        INÍCIO
@@ -74,7 +83,7 @@
             </ul>
         </div>
                     <!-- Ícone do LinkedIn -->
-                    <a href="https://www.linkedin.com/in/alexmacielferreira/" target="_blank" class="ms-3 mb-4">
+                    <a href="https://www.linkedin.com/in/alexmacielferreira/" target="_blank" class="ms-3">
                         <i class="bi bi-linkedin" style="font-size: 24px;"></i>
                     </a>
     </div>
@@ -166,30 +175,33 @@
         </div>
     </div>
     -->
-<div class="section-divider"></div>
-<section id="about">
-    <div class="container">
-                <div class="col-md-7">
-                    <div class="content-left">
-                        <div class="title-resume">
-                            <h3>SOBRE</h3>
-                            <h2>Cineasta
-                                <span><br>Editor de Vídeo</span>
-                                <br> com DRT
-                                <br>
-                            <br>Publicitário</h2>
-                        <br>
-                            <h2>Desenvolvendo em
-                                <br><h2 class="title-resume_PROG">PROGRAMAÇÃO</h2>
-                        </div>
-                </div>
-                </div>
-                    <div class="col-md-5">
-                        <div class="content-right">
-                            <img class="imagem_perfil" src="./foto_exemplo1c.png" style="width: 100%; float: right;">
-                    </div>
-                </div>
-    </div>
+    <section id="about">
+      <div class="container">
+        <div class="col-md-7">
+          <div class="content-left">
+            <div class="title-resume">
+              <h3 data-translate="about.title">SOBRE</h3>
+              <h2 data-translate="about.profession">
+                Cineasta<br>
+                <span>Editor de Vídeo</span><br>
+                com DRT<br><br>
+                Publicitário
+              </h2>
+              <br>
+              <h2 data-translate="about.developing">Desenvolvendo em</h2>
+              <h2 class="title-resume_PROG" data-translate="about.programming">PROGRAMAÇÃO</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="content-right">
+            <img class="imagem_perfil" src="./foto_exemplo1c.png" style="width: 100%; float: right;">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  
 </section>
 <div  class="section-divider"></div>
    <!-- Formação -->
@@ -381,7 +393,7 @@
                 <div class="title-resume">
                     <h3 class="section-title section-title-left">EXPERIÊNCIA</h3>
                     <h2>Mais de 16 anos em <span>Edição de Vídeo</span></h2>
-                    <h4>Emissoras de TV
+                    <h4 class="ocultar-mobile">Emissoras de TV
                         Produtoras
                         Curtas Universitarios
                         Agências de Publicidade
@@ -433,9 +445,21 @@
                         </div>
                     </li>
                     <li>
+                      <div class="timeline-content">
+                          <h4>ILUSION - HENRY E KLAUSS</h4>
+                          <span>FREELANCER - Editor de vídeo - VFX/MOTION 03 e 04/2021</span>
+                      </div>
+                  </li>
+                  <li>
+                    <div class="timeline-content">
+                        <h4>Instituto Vital Brazil</h4>
+                        <span>FREELANCER - Ass. Editor de Vídeo / Logger - 08/2019 - 03/2020</span>
+                    </div>
+                </li>
+                    <li>
                         <div class="timeline-content">
-                            <h4>ILUSION - HENRY E KLAUSS</h4>
-                            <span>FREELANCER - Editor de vídeo - VFX/MOTION 03 e 04/2021</span>
+                            <h4>Universidade Federal Fluminense - Pró-Reitoria de Extensão</h4>
+                            <span>Editor de Vídeo / Produtor de Conteúdo Web - 03/2015 - 11/2019</span>
                         </div>
                     </li>
                     <li>
@@ -577,8 +601,8 @@
       </p>
 
       <div class="mt-4 d-flex gap-2">
-   <!--      <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-globe"></i> Site</a>
-        <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>-->
+   <!--      <a href="#" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-globe"></i> Site</a>
+        <a href="#" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-github"></i> GitHub</a>-->
       </div>
     </div>
   </div>
@@ -606,8 +630,8 @@
       </p>
       
       <div class="mt-4 d-flex gap-2">
-        <a href="https://amf-jquery-galeria-fotos.vercel.app/" class="btn btn-outline-light btn-sm"><i class="bi bi-globe"></i> Site</a>
-        <a href="https://github.com/alexmacielferreira1/JQUERY_EXERCICIO" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>
+        <a href="https://amf-jquery-galeria-fotos.vercel.app/" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-globe"></i> Site</a>
+        <a href="https://github.com/alexmacielferreira1/JQUERY_EXERCICIO" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -627,8 +651,8 @@
         <span class="badge-tec">Responsividade</span>
       </p>
       <div class="mt-4 d-flex gap-2">
-        <a href="https://site-gamesshop-omega-six.vercel.app/" class="btn btn-outline-light btn-sm"><i class="bi bi-globe"></i> Site</a>
-        <a href="https://github.com/alexmacielferreira1/GAMESHOP_EXERCICIO_EBAC" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>
+        <a href="https://site-gamesshop-omega-six.vercel.app/" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-globe"></i> Site</a>
+        <a href="https://github.com/alexmacielferreira1/GAMESHOP_EXERCICIO_EBAC" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -649,8 +673,8 @@
         <span class="badge-tec">DOM</span>
       </p>
       <div class="mt-4 d-flex gap-2">
-        <a href="https://agenda-de-contatos-psi-pearl.vercel.app/" class="btn btn-outline-light btn-sm"><i class="bi bi-globe"></i> Site</a>
-        <a href="https://github.com/alexmacielferreira1/AGENDA_CONTATOS_EXERCICIO_EBAC" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>
+        <a href="https://agenda-de-contatos-psi-pearl.vercel.app/" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-globe"></i> Site</a>
+        <a href="https://github.com/alexmacielferreira1/AGENDA_CONTATOS_EXERCICIO_EBAC" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -670,8 +694,8 @@
         <span class="badge-tec">Lógica Condicional</span>
       </p>
       <div class="mt-4 d-flex gap-2">
-        <a href="https://exercicio-html-js-teal.vercel.app/" class="btn btn-outline-light btn-sm"><i class="bi bi-globe"></i> Site</a>
-        <a href="https://github.com/alexmacielferreira1/COMPARAR-NUMEROS_EXERCICIO_EBAC" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>
+        <a href="https://exercicio-html-js-teal.vercel.app/" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-globe"></i> Site</a>
+        <a href="https://github.com/alexmacielferreira1/COMPARAR-NUMEROS_EXERCICIO_EBAC" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -691,8 +715,8 @@
         <span class="badge-tec">Layout com Grid</span>
       </p>
       <div class="mt-4 d-flex gap-2">
-        <a href="https://ebac-motors-exercicio-ebac.vercel.app/" class="btn btn-outline-light btn-sm"><i class="bi bi-globe"></i> Site</a>
-        <a href="https://github.com/alexmacielferreira1/EBAC-MOTORS_EXERCICIO_EBAC" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>
+        <a href="https://ebac-motors-exercicio-ebac.vercel.app/" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-globe"></i> Site</a>
+        <a href="https://github.com/alexmacielferreira1/EBAC-MOTORS_EXERCICIO_EBAC" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -712,8 +736,8 @@
         <span class="badge-tec">Grid Layout</span>
       </p>
       <div class="mt-4 d-flex gap-2">
-        <a href="https://ebac-shoes-store-phi.vercel.app/" class="btn btn-outline-light btn-sm"><i class="bi bi-globe"></i> Site</a>
-        <a href="https://github.com/alexmacielferreira1/ebac-shoes---store" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>
+        <a href="https://ebac-shoes-store-phi.vercel.app/" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-globe"></i> Site</a>
+        <a href="https://github.com/alexmacielferreira1/ebac-shoes---store" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -733,8 +757,8 @@
         <span class="badge-tec">Animações</span>
       </p>
       <div class="mt-4 d-flex gap-2">
-        <a href="https://jquery-exercicio-ebac.vercel.app/" class="btn btn-outline-light btn-sm"><i class="bi bi-globe"></i> Site</a>
-        <a href="https://github.com/alexmacielferreira1/plugins-jquery-exercicio" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>
+        <a href="https://jquery-exercicio-ebac.vercel.app/" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-globe"></i> Site</a>
+        <a href="https://github.com/alexmacielferreira1/plugins-jquery-exercicio" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -755,8 +779,8 @@
         <span class="badge-tec">Animações</span>
       </p>
       <div class="mt-4 d-flex gap-2">
-        <a href="https://jquery-exercicio-ebac-2.vercel.app/" class="btn btn-outline-light btn-sm"><i class="bi bi-globe"></i> Site</a>
-        <a href="https://github.com/alexmacielferreira1/JQUERY_EXERCICIO_EBAC2" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>
+        <a href="https://jquery-exercicio-ebac-2.vercel.app/" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-globe"></i> Site</a>
+        <a href="https://github.com/alexmacielferreira1/JQUERY_EXERCICIO_EBAC2" class="btn btn-outline-light btn-sm" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -765,55 +789,60 @@
 
 </section>
 
-      <section>
-        <div class="container">
-          <div class="contact segments">
-            <div class="box-content row align-items-left">
-              <div class="col-md-6">
-                <h3 id="contact">ENTRE EM CONTATO</h3>
-                <p>Se tiver alguma dúvida, ideia ou quiser bater um papo...</p>
-                <!-- Ícones de Redes Sociais -->
-                <ul class="list-unstyled d-flex">
-                  <li><a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a></li>
-                  <li><a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></li>
-                  <li><a href="https://wa.me/21967019823" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <form action="#" class="contact-form" id="contact-form" method="post">
-                  <!-- Campos do Formulário -->
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" placeholder="Nome" class="form-control" name="nome">
-                    </div>
-                    <div class="col">
-                      <input type="text" placeholder="Telefone" class="form-control" name="telefone">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <input type="email" placeholder="Email" class="form-control" name="email">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <textarea cols="30" rows="5" class="form-control" name="mensagem" placeholder="Mensagem"></textarea>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-              </div>
-            </div> <!-- Fim da Row -->
-          </div>
+<section>
+  <div class="container">
+  <div class="contact segments">
+      <div class="box-content row align-items-left">
+        <!-- Lado esquerdo (texto e ícones) -->
+        <div class="col-md-6 content-left">
+          <h3 id="contact">ENTRE EM CONTATO</h3>
+          <p>Se tiver alguma dúvida, ideia ou quiser bater um papo...</p>
+          <ul class="list-unstyled d-flex">
+            <li><a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="https://wa.me/21967019823" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+          </ul>
         </div>
+
+        <!-- Lado direito (formulário) -->
+        <div class="col-md-6 content-right">
+          <form action="#" class="contact-form" id="contact-form" method="post">
+            <div class="row">
+              <div class="col">
+                <input type="text" placeholder="Nome" class="form-control" name="nome">
+              </div>
+              <div class="col">
+                <input type="text" placeholder="Telefone" class="form-control" name="telefone">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="email" placeholder="Email" class="form-control" name="email">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <textarea cols="30" rows="5" class="form-control" name="mensagem" placeholder="Mensagem"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div> <!-- Fim da Row -->
+    </div>
+  </div>
 </section>
+<a href="https://wa.me/21967019823" class="whatsapp-link" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
     <!-- 8. Rodapé -->
 <footer>
     <div class="container" id="rodape">
         <p>&copy; Todos os direitos reservados</p>
     </div>
 </footer>
+
 <!-- Carregar o jQuery (necessário para outros scripts, se você estiver usando jQuery) -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -828,11 +857,10 @@
 <script src="js/imagesloaded.pkgd.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-
+<script src="js/traducoes.js"></script>
 <!-- Scripts finais -->
 <script src="js/main.js" defer></script> <!-- Arquivo final, para garantir que tudo esteja carregado antes -->
 
-<script src="js/main.js" defer></script> <!-- Arquivo separado -->
 
 <script>
     $(document).ready(function(){

@@ -211,7 +211,35 @@ softwares.forEach(software => {
 
             // Inicializando os filtros
             applyFilters(); // Aplica os filtros ao carregar os dados
+
+                        // Adicionando os filtros para categorias, atividades, clientes e softwares (omiti a criação dos filtros para manter o exemplo conciso)
+
         })
         .catch(error => console.error('Erro ao carregar o arquivo Excel:', error));
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Aqui você adiciona os ouvintes de evento para os botões de idioma
+    const langBtns = document.querySelectorAll('.lang-btn');
+    if (langBtns.length > 0) {
+        langBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                const lang = button.dataset.lang;
+
+                document.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[lang] && translations[lang][key]) {
+                        element.innerHTML = translations[lang][key];
+                    }
+                });
+
+                const langText = translations[lang]['language-text'];
+                if (langText) {
+                    document.getElementById('language-text').textContent = langText;
+                }
+            });
+        });
+    } else {
+        console.log('Botões de idioma não encontrados!');
+    }
+});
