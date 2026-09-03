@@ -1,79 +1,40 @@
-# 💻 Portfólio de Programação – Alex Maciel Ferreira
+# Portfólio Alex Ferreira — Opção 1 funcional
 
-Bem-vindo(a) ao meu portfólio de projetos desenvolvidos durante minha formação como desenvolvedor Full Stack Python na EBAC. Aqui você encontrará aplicações web com foco em HTML, CSS, JavaScript, jQuery e Bootstrap, todas hospedadas e funcionando online.
+Versão reconstruída da Opção 1, sem dependências de Bootstrap ou jQuery.
 
-Cada projeto apresenta uma funcionalidade diferente, com links para visualização e acesso ao código-fonte.
+## Executar localmente
 
----
+O site usa módulos JavaScript e `fetch`, portanto deve ser aberto por um servidor HTTP:
 
-## 🚀 Tecnologias Utilizadas
+```bash
+python3 -m http.server 4173
+```
 
-- HTML5
-- CSS3
-- JavaScript
-- jQuery
-- Bootstrap
-- Git e GitHub
-- Vercel (deploy)
+Depois acesse `http://localhost:4173`.
 
----
+## Dados do portfólio
 
-## 📂 Projetos
+1. O site consulta primeiro a planilha Google configurada em `app.js`.
+2. Se a consulta falhar ou ultrapassar seis segundos, carrega `data/portfolio.json`.
+3. O fallback foi gerado a partir da planilha Excel do projeto original e contém 62 linhas válidas com título e link de vídeo.
 
-### 1. [Galeria de Fotos com jQuery](https://amf-jquery-galeria-fotos.vercel.app/)
-🛠️ Exercício de manipulação de DOM com jQuery.  
-📁 [Ver no GitHub](https://github.com/alexmacielferreira1/JQUERY_EXERCICIO)
+Para acrescentar proporções de vídeo, a planilha pode receber a coluna `Aspect` ou `Formato`, usando valores como `16:9` ou `9:16`.
 
----
+## Recursos implementados
 
-### 2. [GameShop - Loja de Games](https://site-gamesshop-omega-six.vercel.app/)
-🛒 Projeto de e-commerce com HTML, CSS e Bootstrap.  
-📁 [Ver no GitHub](https://github.com/alexmacielferreira1/GAMESHOP_EXERCICIO_EBAC)
+- layout responsivo da Opção 1;
+- português/inglês automático, com preferência manual persistente;
+- portfólios Audiovisual e Programação;
+- categorias e filtros avançados;
+- modal acessível com player YouTube sem cookies;
+- suporte a links por ID, `watch`, `youtu.be`, `embed` e Shorts;
+- suporte a player 16:9 e 9:16;
+- mapa seguro de ícones e fallback por iniciais;
+- conteúdo externo montado com DOM seguro, sem interpolação em `innerHTML`;
+- formulário funcional por `mailto`;
+- cabeçalhos de segurança para Vercel;
+- estados de falha da planilha, imagem e ausência de resultados.
 
----
+## Observação
 
-### 3. [Agenda de Contatos](https://agenda-de-contatos-psi-pearl.vercel.app/)
-📇 Aplicação para gerenciar contatos com validação de formulários.  
-📁 [Ver no GitHub](https://github.com/alexmacielferreira1/AGENDA_CONTATOS_EXERCICIO_EBAC)
-
----
-
-### 4. [Comparar Números](https://exercicio-html-js-teal.vercel.app/)
-🔢 App simples em JS para comparar valores numéricos.  
-📁 [Ver no GitHub](https://github.com/alexmacielferreira1/COMPARAR-NUMEROS_EXERCICIO_EBAC)
-
----
-
-### 5. [EBAC Motors](https://ebac-motors-exercicio-ebac.vercel.app/)
-🚗 Página de venda de veículos com HTML, CSS e layout responsivo.  
-📁 [Ver no GitHub](https://github.com/alexmacielferreira1/EBAC-MOTORS_EXERCICIO_EBAC)
-
----
-
-### 6. [EBAC Shoes - Loja Virtual](https://ebac-shoes-store-phi.vercel.app/)
-👟 E-commerce de calçados com carrossel e grid de produtos.  
-📁 [Ver no GitHub](https://github.com/alexmacielferreira1/ebac-shoes---store)
-
----
-
-### 7. [Exercício jQuery - Plugins](https://jquery-exercicio-ebac.vercel.app/)
-✨ Uso de plugins jQuery para efeitos e interações.  
-📁 [Ver no GitHub](https://github.com/alexmacielferreira1/plugins-jquery-exercicio)
-
----
-
-### 8. [Exercício jQuery Avançado](https://jquery-exercicio-ebac-2.vercel.app/)
-📚 Continuação com foco em eventos e animações em jQuery.  
-📁 [Ver no GitHub](https://github.com/alexmacielferreira1/JQUERY_EXERCICIO_EBAC2)
-
----
-
-## 📫 Contato
-
-- 📧 alexmacielferreira1@gmail.com  
-- 💼 [LinkedIn](https://www.linkedin.com/in/alexmacielferreira1)  
-- 🧠 Em constante aprendizado e desenvolvimento!
-
----
-
-**Obrigado pela visita!** ✨  
+A interface está pronta para ser publicada como site estático na Vercel. Antes de substituir o site atual, revise textos, datas, links sociais e o número do WhatsApp.
