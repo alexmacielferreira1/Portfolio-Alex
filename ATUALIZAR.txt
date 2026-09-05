@@ -14,5 +14,5 @@ FEITO:
 - Corrigido em C:\Users\Alex\Desktop\Curriculo e LinkedIn: certificado DaVinci Resolve e versao 21
 - Botao "Fale comigo" do header trocado por icone de WhatsApp (redundante com o menu Contato); botao flutuante de WhatsApp trocado da letra "W" pro icone atual
 - "16+ anos" trocado por contagem automatica (calcula a partir de 2009 usando o ano atual) - nao fica desatualizado mais
-- Filtros avancados (Atividade/Cliente/Software) agora se ajustam entre si: opcao sem correspondencia some da lista; ao limpar filtros, volta tudo. Os filtros basicos (guias/categorias em cima) continuam sempre completos.
+- Filtros avancados (Atividade/Cliente/Software) agora se ajustam entre si: opcao AINDA NAO escolhida some da lista quando fica sem correspondencia; uma opcao que voce ja escolheu nunca e resetada sozinha, mesmo sem resultado. Ao limpar filtros, volta tudo. Os filtros basicos (guias/categorias em cima) continuam sempre completos.
 - Card de trabalho: clicar em qualquer parte do card (nao so no botao "Ver detalhes") abre a janela de detalhes
