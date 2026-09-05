@@ -70,11 +70,35 @@ async function loadData(){
   prepareFilters(); renderFilters(); applyFilters();
 }
 
-function unique(field){return [...new Set(state.items.flatMap(item=>Array.isArray(item[field])?item[field]:[item[field]]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR'))}
+function uniqueIn(items,field){return [...new Set(items.flatMap(item=>Array.isArray(item[field])?item[field]:[item[field]]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR'))}
+function unique(field){return uniqueIn(state.items,field)}
 function prepareFilters(){
-  fillSelect('#activity-filter',unique('activities'));fillSelect('#client-filter',unique('client'));fillSelect('#software-filter',unique('software'));
+  refreshAdvancedFilters();
 }
-function fillSelect(selector,values){const select=$(selector);select.replaceChildren();select.append(new Option(t('filters.all'),'Todos'));values.forEach(v=>select.append(new Option(v,v)));}
+function fillSelect(selector,values){const select=$(selector);const current=select.value;select.replaceChildren();select.append(new Option(t('filters.all'),'Todos'));values.forEach(v=>select.append(new Option(v,v)));select.value=current;}
+function matchesExcept(item,exclude){
+  return (state.category==='Todos'||item.category===state.category)
+    &&(exclude==='activity'||state.activity==='Todos'||item.activities.includes(state.activity))
+    &&(exclude==='client'||state.client==='Todos'||item.client===state.client)
+    &&(exclude==='software'||state.software==='Todos'||item.software.includes(state.software));
+}
+function advancedOptions(){
+  return {
+    activity:uniqueIn(state.items.filter(item=>matchesExcept(item,'activity')),'activities'),
+    client:uniqueIn(state.items.filter(item=>matchesExcept(item,'client')),'client'),
+    software:uniqueIn(state.items.filter(item=>matchesExcept(item,'software')),'software')
+  };
+}
+function refreshAdvancedFilters(){
+  if(!$('#activity-filter'))return;
+  let options=advancedOptions();
+  let resetAny=false;
+  for(const key of ['activity','client','software']) if(state[key]!=='Todos'&&!options[key].includes(state[key])){state[key]='Todos';resetAny=true;}
+  if(resetAny) options=advancedOptions();
+  for(const [key,selector] of [['activity','#activity-filter'],['client','#client-filter'],['software','#software-filter']]){
+    fillSelect(selector,options[key]); $(selector).value=state[key];
+  }
+}
 const CATEGORY_PRIORITY=['TRAILER','PROMO DE CANAL','DOCUMENTÁRIO'];
 function orderedCategories(){const all=unique('category');return [...CATEGORY_PRIORITY.filter(c=>all.includes(c)),...all.filter(c=>!CATEGORY_PRIORITY.includes(c))]}
 function programmingTechs(){return [...new Set(programming.flatMap(p=>p[1].split(',').map(s=>s.trim())).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR'))}
@@ -85,6 +109,7 @@ function renderFilters(){
 }
 function applyFilters(){
   if(state.mode==='programming'){renderPortfolio();return;}
+  refreshAdvancedFilters();
   state.filtered=state.items.filter(item=>(state.category==='Todos'||item.category===state.category)&&(state.activity==='Todos'||item.activities.includes(state.activity))&&(state.client==='Todos'||item.client===state.client)&&(state.software==='Todos'||item.software.includes(state.software)));
   renderPortfolio();
 }
@@ -94,8 +119,8 @@ function youtubeId(value){
   try{const url=new URL(raw);if(url.hostname.includes('youtu.be'))return url.pathname.split('/').filter(Boolean)[0]||'';if(url.hostname.includes('youtube.com'))return url.searchParams.get('v')||url.pathname.split('/').filter(Boolean).pop()||'';}catch{} return '';
 }
 function workCard(item){
-  const article=make('article','work-card');const thumb=make('div','work-thumb');const img=new Image();const id=youtubeId(item.youtube);img.src=id?`https://img.youtube.com/vi/${id}/hqdefault.jpg`:'assets/programming/0.webp';img.alt='';img.loading='lazy';img.width=480;img.height=270;img.addEventListener('error',()=>{img.src='assets/programming/0.webp'});thumb.append(img,make('span','play','▶'));
-  const body=make('div','work-card-body');body.append(make('span','card-category',item.category),make('h3','',item.title),make('p','',item.activities.join(' • ')));const actions=make('div','card-actions');const btn=make('button','',t('card.details'));btn.type='button';btn.addEventListener('click',()=>openDialog(item));actions.append(btn);body.append(actions);article.append(thumb,body);return article;
+  const article=make('article','work-card');article.style.cursor='pointer';article.addEventListener('click',()=>openDialog(item));const thumb=make('div','work-thumb');const img=new Image();const id=youtubeId(item.youtube);img.src=id?`https://img.youtube.com/vi/${id}/hqdefault.jpg`:'assets/programming/0.webp';img.alt='';img.loading='lazy';img.width=480;img.height=270;img.addEventListener('error',()=>{img.src='assets/programming/0.webp'});thumb.append(img,make('span','play','▶'));
+  const body=make('div','work-card-body');body.append(make('span','card-category',item.category),make('h3','',item.title),make('p','',item.activities.join(' • ')));const actions=make('div','card-actions');const btn=make('button','',t('card.details'));btn.type='button';actions.append(btn);body.append(actions);article.append(thumb,body);return article;
 }
 function programmingCard(item){
   const [title,tools,image,site,code]=item;const article=make('article','work-card');const thumb=make('div','work-thumb');const img=new Image();img.src=`assets/programming/${image}`;img.alt='';img.loading='lazy';thumb.append(img);const body=make('div','work-card-body');body.append(make('span','card-category','Programação'),make('h3','',title),make('p','',tools));const actions=make('div','card-actions');if(site){const a=make('a','',t('card.site'));a.href=site;a.target='_blank';a.rel='noopener noreferrer';actions.append(a)}if(code){const a=make('a','',t('card.code'));a.href=code;a.target='_blank';a.rel='noopener noreferrer';actions.append(a)}body.append(actions);article.append(thumb,body);return article;
