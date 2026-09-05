@@ -75,9 +75,11 @@ function prepareFilters(){
   fillSelect('#activity-filter',unique('activities'));fillSelect('#client-filter',unique('client'));fillSelect('#software-filter',unique('software'));
 }
 function fillSelect(selector,values){const select=$(selector);select.replaceChildren();select.append(new Option(t('filters.all'),'Todos'));values.forEach(v=>select.append(new Option(v,v)));}
+const CATEGORY_PRIORITY=['TRAILER','PROMO DE CANAL','DOCUMENTÁRIO'];
+function orderedCategories(){const all=unique('category');return [...CATEGORY_PRIORITY.filter(c=>all.includes(c)),...all.filter(c=>!CATEGORY_PRIORITY.includes(c))]}
 function renderFilters(){
   if(!$('#category-filters'))return;
-  const categories=state.mode==='audiovisual'?['Todos',...unique('category')]:['Todos','Front-end','JavaScript','Python','Dados','UI/UX'];
+  const categories=state.mode==='audiovisual'?['Todos',...orderedCategories()]:['Todos','Front-end','JavaScript','Python','Dados','UI/UX'];
   $('#category-filters').replaceChildren(...categories.map(value=>{const b=document.createElement('button');b.type='button';b.textContent=value==='Todos'?t('filters.all'):value;b.className=value===state.category?'active':'';b.addEventListener('click',()=>{state.category=value;state.visible=PAGE_SIZE;applyFilters()});return b;}));
 }
 function applyFilters(){
