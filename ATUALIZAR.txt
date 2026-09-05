@@ -1,7 +1,6 @@
 PENDENTE:
 - Foto de perfil: a atual e provisoria (foto antiga que ja estava disponivel) - Alex ainda pode trocar por uma mais atual quando tiver
 - Revisar experiencia/formacao nova publicada (dados vieram de C:\Users\Alex\Desktop\Curriculo e LinkedIn\00_PERFIL_MESTRE.md) - conferir se datas e cargos estao corretos
-- Duvida em aberto no perfil mestre: DaVinci Resolve certificado - CV cita versao 17, LinkedIn cita versao 19 (nao foi adicionado ao site, so avisando)
 
 FEITO:
 - Logo do header aumentado (header + footer)
@@ -9,3 +8,4 @@ FEITO:
 - Foto de perfil provisoria atualizada (assets/profile/alex-ferreira.webp)
 - Experiencia atualizada: 3 vagas novas (Lumiere/ALERGS, Lumiere/Camara Municipal, Teclift), datas corrigidas (Apus, Tatui Filmes/Netflix, Instituto Vital Brazil)
 - Formacao atualizada: Unisinos (Publicidade) adicionada, datas corrigidas (UFF, Melies, EBAC), Pos Anhanguera e MBA SENAC atualizados como em andamento
+- Corrigido em C:\Users\Alex\Desktop\Curriculo e LinkedIn: certificado DaVinci Resolve e versao 21 (CV/LinkedIn tinham 17 e 19 desatualizados)
