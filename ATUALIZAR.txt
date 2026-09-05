@@ -1,8 +1,9 @@
 PENDENTE:
-- Foto de perfil: Alex vai mandar foto nova (ou pedir pra melhorar a atual)
+- Foto de perfil: a atual e provisoria (foto antiga que ja estava disponivel) - Alex ainda pode trocar por uma mais atual quando tiver
 - Experiencia: atualizar trabalhos na timeline (aguardando o que muda)
 - Formacao: atualizar cursos e pos-graduacoes (aguardando o que muda)
 
 FEITO:
 - Logo do header aumentado (header + footer)
 - Logos de clientes adicionados nos detalhes de video: Canal Futura, Lumine, Instituto Vital Brazil, Assist, Clube do Valor, Havan
+- Foto de perfil provisoria atualizada (assets/profile/alex-ferreira.webp)
