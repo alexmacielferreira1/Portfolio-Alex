@@ -2,6 +2,9 @@ PENDENTE:
 - Foto de perfil: a atual e provisoria (foto antiga que ja estava disponivel) - Alex ainda pode trocar por uma mais atual quando tiver
 
 FEITO:
+- Print do cabecalho/hero do site atualizado, usado como imagem do card 'Portfolio Pessoal' em Trabalhos > Programacao
+- Tecnologias dos projetos de programacao corrigidas conferindo cada repositorio no GitHub: Loja de Games e EBAC Motors nao usavam Bootstrap (removido/corrigido pra jQuery+Slick Carousel), Interacoes com jQuery usa Bootstrap (adicionado), jQuery com Plugins detalhado (jQuery Validate, Slick Carousel)
+- Filtros de Programacao trocados: antes eram fixos e quase nenhum funcionava (Front-end/Python/Dados/UI-UX nao existiam nos projetos); agora sao gerados automaticamente a partir das tecnologias reais de cada projeto
 - Ordem dos filtros de categoria em Trabalhos em destaque: Todos, Trailer, Promo de Canal, Documentario, e os demais
 - Logo do header aumentado (header + footer)
 - Logos de clientes adicionados nos detalhes de video: Canal Futura, Lumine, Instituto Vital Brazil, Assist, Clube do Valor, Havan
