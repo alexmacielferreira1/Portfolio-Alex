@@ -1,0 +1,8 @@
+PENDENTE:
+- Foto de perfil: Alex vai mandar foto nova (ou pedir pra melhorar a atual)
+- Experiencia: atualizar trabalhos na timeline (aguardando o que muda)
+- Formacao: atualizar cursos e pos-graduacoes (aguardando o que muda)
+
+FEITO:
+- Logo do header aumentado (header + footer)
+- Logos de clientes adicionados nos detalhes de video: Canal Futura, Lumine, Instituto Vital Brazil, Assist, Clube do Valor, Havan
