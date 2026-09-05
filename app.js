@@ -91,12 +91,11 @@ function advancedOptions(){
 }
 function refreshAdvancedFilters(){
   if(!$('#activity-filter'))return;
-  let options=advancedOptions();
-  let resetAny=false;
-  for(const key of ['activity','client','software']) if(state[key]!=='Todos'&&!options[key].includes(state[key])){state[key]='Todos';resetAny=true;}
-  if(resetAny) options=advancedOptions();
+  const options=advancedOptions();
   for(const [key,selector] of [['activity','#activity-filter'],['client','#client-filter'],['software','#software-filter']]){
-    fillSelect(selector,options[key]); $(selector).value=state[key];
+    let list=options[key];
+    if(state[key]!=='Todos'&&!list.includes(state[key])) list=[...list,state[key]].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+    fillSelect(selector,list); $(selector).value=state[key];
   }
 }
 const CATEGORY_PRIORITY=['TRAILER','PROMO DE CANAL','DOCUMENTÁRIO'];
